@@ -98,5 +98,15 @@
             { "question": "What country is this located in?", "answer": "Germany" },
             { "question": "What is the overall vibe of this location?", "answer": "Peaceful and natural" }
         ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747151839871!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRF8yT0tLZnc.!2m2!1d21.42254528047561!2d39.82619011687317!3f344.4510043733093!4f21.854995469316123!5f0.7820865974627469",
+        "questions": [
+            { "question": "What religion is shown in this landscape", "answer": "Islam" },
+            { "question": "What type of vegetation is visible?", "answer": "Forests and grasslands" },
+            { "question": "What type of roads are visible?", "answer": "Country roads" },
+            { "question": "What country is this located in?", "answer": "Germany" },
+            { "question": "What is the overall vibe of this location?", "answer": "Peaceful and natural" }
+        ]
     }
 ]
