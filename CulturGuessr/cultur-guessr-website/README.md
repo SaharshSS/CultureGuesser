@@ -1,70 +1,11 @@
-# Tamil Dictionary Website
+# CulturGuessr
 
-This project is a Tamil dictionary website that allows users to search for Tamil words and their meanings. It is built using TypeScript and React, providing a modern and responsive user interface.
+CulturGuessr is an interactive web-based quiz game that tests your knowledge of cultures and landmarks from around the world. Built with HTML, CSS, and JavaScript, it provides a fun and engaging way to learn about global cultures.
 
 ## Features
 
-- Search for Tamil words
-- View meanings and definitions
-- User-friendly interface
+- **Interactive Quiz**: Test your knowledge of world cultures and landmarks.
+- **Responsive Design**: Optimized for desktop and mobile devices.
+- **Dynamic Navigation**: Start the quiz with a single click and explore different questions.
 
 ## Project Structure
-
-```
-tamil-dictionary-website
-├── public
-│   ├── index.html        # Main HTML document
-│   ├── styles            # Contains CSS styles
-│   │   └── style.css     # Styles for the website
-│   └── scripts           # Contains JavaScript files
-│       └── app.js        # Front-end logic
-├── src
-│   ├── api               # API interactions
-│   │   └── dictionary.ts # Functions for dictionary operations
-│   ├── components        # React components
-│   │   ├── Header.tsx    # Header component
-│   │   ├── Footer.tsx    # Footer component
-│   │   └── SearchBar.tsx # Search bar component
-│   └── types             # TypeScript types
-│       └── index.ts      # Type definitions
-├── package.json          # npm configuration
-├── tsconfig.json         # TypeScript configuration
-└── README.md             # Project documentation
-```
-
-## Setup Instructions
-
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-
-2. Navigate to the project directory:
-   ```
-   cd tamil-dictionary-website
-   ```
-
-3. Install the dependencies:
-   ```
-   npm install
-   ```
-
-4. Start the development server:
-   ```
-   npm start
-   ```
-
-5. Open your browser and go to `http://localhost:3000` to view the application.
-
-## Usage
-
-- Use the search bar to enter a Tamil word and click the search button to find its meaning.
-- Explore the dictionary entries and their definitions.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License.
