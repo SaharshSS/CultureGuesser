@@ -119,4 +119,11 @@
             { "question": "What is the overall vibe of this location?", "answer": "Peaceful and natural" }
         ]
     }
+        {
+        "locations": "https://www.google.com/maps/embed?pb=!4v1747152282651!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJREVqT1RGT2c.!2m2!1d55.75500000335755!2d37.61889993836996!3f313.9336795889133!4f11.182058139385589!5f0.7820865974627469",
+        "questions": [
+            { "question": "What's the main religion relevant?", "answer": "Christianity"},
+            { "question": "What country are you in?", "answer": "Russia"},
+        ]
+    }
 ]
