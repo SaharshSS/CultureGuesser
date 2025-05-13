@@ -20,6 +20,22 @@
         ]
     },
     {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747152938114!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRDQ0b19CcXdF!2m2!1d39.01946079702463!2d125.7535510692188!3f191.55612559929727!4f-4.279829649158202!5f0.4000000000000002",
+        "questions": [
+            {
+                "type": "multiple-choice",
+                "question": "Which country is this landmark located in?",
+                "options": ["France", "North Korea", "Germany", "Spain"],
+                "answer": "North Korea"
+            },
+            {
+                "type": "text",
+                "question": "What is the name of this landmark?",
+                "answer": "Eiffel Tower"
+            }
+        ]
+    },
+    {
         "location": "https://www.google.com/maps/embed?pb=!4v1747105088325!6m8!1m7!1sAONzv5ddRgd7bE3nAfHzzw!2m2!1d35.675147!2d139.751595!3f188.2124825862145!4f-6.111467896203635!5f0.7820865974627469",
         "questions": [
             { "question": "What major landmark can be seen from here?", "answer": "Tokyo Tower" },
