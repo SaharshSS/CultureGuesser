@@ -142,4 +142,20 @@
             { "question": "What country are you in?", "answer": "Russia"}
         ]
     }
+    {
+        "locations": "https://www.google.com/maps/embed?pb=!4v1747164283882!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzJqYWJWZUE.!2m2!1d41.90296878343602!2d12.45448479329444!3f345.1100300713851!4f28.47450255565687!5f0.4000000000000002",
+        "questions": [
+            {
+                "type": "multiple-choice",
+                "question": "Based on the art, in which country are you located?",
+                "options": ["United States", "Italy", "Israel", "Vatican City"],
+                "answer": "Vatican City"
+            },
+            {
+                "type": "text",
+                "question": "What is the name of this landmark?",
+                "answer": "Sistine Chapel"
+            }
+        ]
+    }
 ]
