@@ -38,13 +38,25 @@
             display: block;
             margin-bottom: 10px;
         }
-        .question-box input[type="text"] {
+        .question-box input[type="text"],
+        .question-box .options {
             width: 100%;
-            padding: 2px;
+            margin-bottom: 10px;
+        }
+        .question-box .options button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
             font-size: 1rem;
+            background-color: #f0f0f0;
             border: 1px solid #ccc;
             border-radius: 4px;
+            cursor: pointer;
             transition: background-color 0.3s ease;
+        }
+        .question-box .options button:hover {
+            background-color: #ddd;
         }
         .next-button {
             display: none;
@@ -69,7 +81,9 @@
     <!-- Question Box -->
     <div class="question-box">
         <label id="questionLabel"></label>
-        <input type="text" id="answerInput" placeholder="Type your answer here..." oninput="checkAnswer()">
+        <div id="answerInputContainer">
+            <input type="text" id="answerInput" placeholder="Type your answer here..." oninput="checkAnswer()">
+        </div>
         <button class="next-button" id="nextButton" onclick="nextQuestion()">Next</button>
     </div>
 
@@ -103,7 +117,7 @@
             const locationData = locations[index];
             const iframe = document.getElementById('map');
             const questionLabel = document.getElementById('questionLabel');
-            const answerInput = document.getElementById('answerInput');
+            const answerInputContainer = document.getElementById('answerInputContainer');
             const nextButton = document.getElementById('nextButton');
 
             // Set the map iframe
@@ -111,24 +125,51 @@
 
             // Display the first question
             currentQuestionIndex = 0;
-            questionLabel.textContent = locationData.questions[currentQuestionIndex].question;
-            answerInput.value = '';
-            answerInput.style.backgroundColor = '';
+            const currentQuestion = locationData.questions[currentQuestionIndex];
+            questionLabel.textContent = currentQuestion.question;
+
+            // Clear previous inputs
+            answerInputContainer.innerHTML = '';
             nextButton.style.display = 'none';
+
+            if (currentQuestion.type === 'multiple-choice') {
+                // Render multiple-choice options
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options';
+                currentQuestion.options.forEach(option => {
+                    const button = document.createElement('button');
+                    button.textContent = option;
+                    button.onclick = () => checkAnswer(option);
+                    optionsDiv.appendChild(button);
+                });
+                answerInputContainer.appendChild(optionsDiv);
+            } else {
+                // Render text input
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.id = 'answerInput';
+                input.placeholder = 'Type your answer here...';
+                input.oninput = () => checkAnswer(input.value);
+                answerInputContainer.appendChild(input);
+            }
         }
 
         // Check the user's answer
-        function checkAnswer() {
-            const input = document.getElementById('answerInput');
-            const userAnswer = input.value.trim().toLowerCase();
-            const correctAnswer = locations[currentLocationIndex].questions[currentQuestionIndex].answer.toLowerCase();
+        function checkAnswer(userAnswer) {
+            const currentQuestion = locations[currentLocationIndex].questions[currentQuestionIndex];
             const nextButton = document.getElementById('nextButton');
 
+            if (typeof userAnswer === 'string') {
+                userAnswer = userAnswer.trim().toLowerCase();
+            } else {
+                userAnswer = document.getElementById('answerInput').value.trim().toLowerCase();
+            }
+
+            const correctAnswer = currentQuestion.answer.toLowerCase();
+
             if (userAnswer === correctAnswer) {
-                input.style.backgroundColor = "lightgreen"; // Correct answer
                 nextButton.style.display = 'block'; // Show the Next button
             } else {
-                input.style.backgroundColor = "lightcoral"; // Incorrect answer
                 nextButton.style.display = 'none'; // Hide the Next button
             }
         }
@@ -136,17 +177,11 @@
         // Go to the next question or location
         function nextQuestion() {
             const locationData = locations[currentLocationIndex];
-            const questionLabel = document.getElementById('questionLabel');
-            const answerInput = document.getElementById('answerInput');
-            const nextButton = document.getElementById('nextButton');
 
             if (currentQuestionIndex < locationData.questions.length - 1) {
                 // Move to the next question
                 currentQuestionIndex++;
-                questionLabel.textContent = locationData.questions[currentQuestionIndex].question;
-                answerInput.value = '';
-                answerInput.style.backgroundColor = '';
-                nextButton.style.display = 'none';
+                loadLocation(currentLocationIndex);
             } else if (currentLocationIndex < locations.length - 1) {
                 // Move to the next location
                 currentLocationIndex++;
