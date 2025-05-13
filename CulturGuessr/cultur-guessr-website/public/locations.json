@@ -1,0 +1,102 @@
+[
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747101751467!6m8!1m7!1sQSYwNXfqXTISsjyq3eKstg!2m2!1d40.748817!2d-73.985428!3f249.07623803435044!4f-17.65559922099363!5f0.7820865974627469",
+        "questions": [
+            { "question": "What iconic structure can be seen from this viewpoint?", "answer": "Empire State Building" },
+            { "question": "What type of vehicle is closest to the camera?", "answer": "Yellow taxi" },
+            { "question": "What kind of transportation system is visible on the street?", "answer": "Bus" },
+            { "question": "What color are the majority of the buildings?", "answer": "Gray" },
+            { "question": "What time of day does this image appear to be?", "answer": "Daytime" }
+        ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747103928917!6m8!1m7!1sCPkOysrb6SXLv_xN_6O2cg!2m2!1d48.858844!2d2.294350!3f254.14535252438507!4f-16.123803559084057!5f0.7820865974627469",
+        "questions": [
+            { "question": "What famous landmark is visible in the distance?", "answer": "Eiffel Tower" },
+            { "question": "What is the primary language seen on the street signs?", "answer": "French" },
+            { "question": "What architectural style is the building near the camera?", "answer": "Classic Parisian architecture" },
+            { "question": "What is the weather like in the scene?", "answer": "Clear skies" },
+            { "question": "What type of street is visible?", "answer": "Urban street" }
+        ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747105088325!6m8!1m7!1sAONzv5ddRgd7bE3nAfHzzw!2m2!1d35.675147!2d139.751595!3f188.2124825862145!4f-6.111467896203635!5f0.7820865974627469",
+        "questions": [
+            { "question": "What major landmark can be seen from here?", "answer": "Tokyo Tower" },
+            { "question": "What kind of transportation is visible?", "answer": "Train" },
+            { "question": "What language is visible on the building?", "answer": "Japanese" },
+            { "question": "What type of business is visible on the street?", "answer": "Shopping district" },
+            { "question": "What is the general vibe of the city based on the scene?", "answer": "Busy and modern" }
+        ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747107338221!6m8!1m7!1sMjbX7TfGsRokosTHtI0uDA!2m2!1d-34.603684!2d-58.381559!3f273.4895571850242!4f-11.232935883168992!5f0.7820865974627469",
+        "questions": [
+            { "question": "What famous landmark is visible?", "answer": "Obelisco" },
+            { "question": "Which language is visible on the street signs?", "answer": "Spanish" },
+            { "question": "What type of vehicles are visible on the street?", "answer": "Cars and buses" },
+            { "question": "What city is this street in?", "answer": "Buenos Aires" },
+            { "question": "What time of day is it in the scene?", "answer": "Daylight" }
+        ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747109485738!6m8!1m7!1s7bp3U1UKGE_o-ROr6db8ug!2m2!1d51.507351!2d-0.127758!3f253.0413683838271!4f-11.14930815278598!5f0.7820865974627469",
+        "questions": [
+            { "question": "What famous landmark is visible?", "answer": "Big Ben" },
+            { "question": "What language is visible on the street signs?", "answer": "English" },
+            { "question": "What type of architecture is visible?", "answer": "Gothic" },
+            { "question": "What type of vehicles are visible on the street?", "answer": "Buses and cars" },
+            { "question": "What time of day is shown?", "answer": "Evening" }
+        ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747111632395!6m8!1m7!1sbZhm2NNO-5zF6hx7P21aPQ!2m2!1d40.730610!2d-73.935242!3f259.2426432124857!4f-9.035110428993852!5f0.7820865974627469",
+        "questions": [
+            { "question": "What street is this image taken from?", "answer": "Brooklyn" },
+            { "question": "What language is visible on the street signs?", "answer": "English" },
+            { "question": "What kind of buildings are visible?", "answer": "Apartment buildings" },
+            { "question": "What is the mood of the scene?", "answer": "Urban and busy" },
+            { "question": "What type of vehicles are visible?", "answer": "Cars and bikes" }
+        ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747113778369!6m8!1m7!1sNWZnK1X8uNn99dyveNEfFw!2m2!1d48.208174!2d16.373819!3f202.67822698216042!4f-7.415676254358221!5f0.7820865974627469",
+        "questions": [
+            { "question": "What famous landmark is visible?", "answer": "St. Stephen's Cathedral" },
+            { "question": "What language is visible on the street signs?", "answer": "German" },
+            { "question": "What time of day is shown?", "answer": "Morning" },
+            { "question": "What type of transportation is visible?", "answer": "Tram" },
+            { "question": "What is the atmosphere of the scene?", "answer": "Quiet and historic" }
+        ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747115934572!6m8!1m7!1sBGGvl0Fv9oEkhNh8owDCmg!2m2!1d35.682839!2d139.759455!3f312.4803930199843!4f-3.438952708062234!5f0.7820865974627469",
+        "questions": [
+            { "question": "What famous building is visible?", "answer": "Tokyo Station" },
+            { "question": "What is the weather like?", "answer": "Clear and sunny" },
+            { "question": "What type of transportation system is visible?", "answer": "Train station" },
+            { "question": "What city is this in?", "answer": "Tokyo" },
+            { "question": "What type of vehicles are visible?", "answer": "Cars and buses" }
+        ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747118096782!6m8!1m7!1sZqgL0CV6pM3vH1iwmi3A0Q!2m2!1d-33.867487!2d151.206990!3f276.7598455823151!4f-9.479327210831482!5f0.7820865974627469",
+        "questions": [
+            { "question": "What landmark is visible?", "answer": "Sydney Opera House" },
+            { "question": "What time of day is it?", "answer": "Daytime" },
+            { "question": "What kind of environment is visible?", "answer": "Urban waterfront" },
+            { "question": "What language is visible on the street signs?", "answer": "English" },
+            { "question": "What is the mode of transport visible?", "answer": "Ferry" }
+        ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747120200549!6m8!1m7!1sfRGVjgxJ4-7OSLB0sbV-Qw!2m2!1d51.165691!2d10.451526!3f208.31369540635517!4f-10.94871214011585!5f0.7820865974627469",
+        "questions": [
+            { "question": "What is the landscape like?", "answer": "Rural and green" },
+            { "question": "What type of vegetation is visible?", "answer": "Forests and grasslands" },
+            { "question": "What type of roads are visible?", "answer": "Country roads" },
+            { "question": "What country is this located in?", "answer": "Germany" },
+            { "question": "What is the overall vibe of this location?", "answer": "Peaceful and natural" }
+        ]
+    }
+]

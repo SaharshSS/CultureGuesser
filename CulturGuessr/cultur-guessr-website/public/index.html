@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CulturGuessr</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+        .question-box {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            font-family: Arial, sans-serif;
+            color: #333;
+            width: 300px;
+        }
+        .question-box label {
+            font-size: 1rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .question-box input[type="text"] {
+            width: 100%;
+            padding: 2px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .next-button {
+            display: none;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .next-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Maps Embed -->
+    <iframe id="map" src="" allowfullscreen></iframe>
+
+    <!-- Question Box -->
+    <div class="question-box">
+        <label id="questionLabel"></label>
+        <input type="text" id="answerInput" placeholder="Type your answer here..." oninput="checkAnswer()">
+        <button class="next-button" id="nextButton" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <script>
+        let locations = [];
+        let currentLocationIndex = 0;
+        let currentQuestionIndex = 0;
+
+        // Fetch the JSON file
+        async function fetchLocations() {
+            const response = await fetch('locations.json');
+            locations = await response.json();
+
+            // Shuffle the locations array
+            shuffleArray(locations);
+
+            // Load the first location
+            loadLocation(currentLocationIndex);
+        }
+
+        // Shuffle the array using Fisher-Yates algorithm
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Load the current location and its first question
+        function loadLocation(index) {
+            const locationData = locations[index];
+            const iframe = document.getElementById('map');
+            const questionLabel = document.getElementById('questionLabel');
+            const answerInput = document.getElementById('answerInput');
+            const nextButton = document.getElementById('nextButton');
+
+            // Set the map iframe
+            iframe.src = locationData.location;
+
+            // Display the first question
+            currentQuestionIndex = 0;
+            questionLabel.textContent = locationData.questions[currentQuestionIndex].question;
+            answerInput.value = '';
+            answerInput.style.backgroundColor = '';
+            nextButton.style.display = 'none';
+        }
+
+        // Check the user's answer
+        function checkAnswer() {
+            const input = document.getElementById('answerInput');
+            const userAnswer = input.value.trim().toLowerCase();
+            const correctAnswer = locations[currentLocationIndex].questions[currentQuestionIndex].answer.toLowerCase();
+            const nextButton = document.getElementById('nextButton');
+
+            if (userAnswer === correctAnswer) {
+                input.style.backgroundColor = "lightgreen"; // Correct answer
+                nextButton.style.display = 'block'; // Show the Next button
+            } else {
+                input.style.backgroundColor = "lightcoral"; // Incorrect answer
+                nextButton.style.display = 'none'; // Hide the Next button
+            }
+        }
+
+        // Go to the next question or location
+        function nextQuestion() {
+            const locationData = locations[currentLocationIndex];
+            const questionLabel = document.getElementById('questionLabel');
+            const answerInput = document.getElementById('answerInput');
+            const nextButton = document.getElementById('nextButton');
+
+            if (currentQuestionIndex < locationData.questions.length - 1) {
+                // Move to the next question
+                currentQuestionIndex++;
+                questionLabel.textContent = locationData.questions[currentQuestionIndex].question;
+                answerInput.value = '';
+                answerInput.style.backgroundColor = '';
+                nextButton.style.display = 'none';
+            } else if (currentLocationIndex < locations.length - 1) {
+                // Move to the next location
+                currentLocationIndex++;
+                loadLocation(currentLocationIndex);
+            } else {
+                // End of the quiz
+                window.location.href = 'congratulations.html'; // Redirect to the new page
+            }
+        }
+
+        // Load the locations on page load
+        window.onload = fetchLocations;
+    </script>
+</body>
+</html>
