@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -38,10 +39,21 @@
     <div>
         <h1>Good Job! 🎉</h1>
         <p>You have completed the quiz!</p>
+        <p>Your final score is: <span id="finalScore">0</span></p>
         <button onclick="goHome()">Go to Home</button>
     </div>
 
     <script>
+        // Retrieve the final score from localStorage
+        const finalScore = localStorage.getItem('finalScore');
+
+        // Check if the score exists and display it
+        if (finalScore !== null) {
+            document.getElementById('finalScore').textContent = finalScore;
+        } else {
+            document.getElementById('finalScore').textContent = '0'; // Default to 0 if no score is found
+        }
+
         function goHome() {
             // Redirect to the home page
             window.location.href = 'home.html';

@@ -94,9 +94,30 @@
             font-size: 1.2rem;
             color: white;
             font-family: Arial, sans-serif;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: #4caf50;
             padding: 5px 10px;
             border-radius: 5px;
+        }
+        #scoreChart {
+            position: absolute;
+            top: 70px; /* Adjust to appear below the clock */
+            right: 20px; /* Align with the clock on the right */
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        #scoreChart h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        #scoreChart p {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -118,10 +139,17 @@
         <button class="next-button" id="nextButton" onclick="nextQuestion()">Next</button>
     </div>
 
+    <!-- Score Chart -->
+    <div id="scoreChart">
+        <h2>Score</h2>
+        <p id="score">0</p>
+    </div>
+
     <!-- Local Time Display -->
     <div id="localTime"></div>
 
     <script>
+        let score = 0; // Initialize the score
         let locations = [];
         let currentLocationIndex = 0;
         let currentQuestionIndex = 0;
@@ -247,6 +275,9 @@
             const correctAnswer = currentQuestion.answer.toLowerCase();
 
             if (userAnswer === correctAnswer) {
+                score += 1000; // Add 1000 points for each correct answer
+                localStorage.setItem('finalScore', score); // Save the final score
+                updateScore(); // Update the score display
                 nextButton.style.display = 'block'; // Show the Next button
                 if (answerInput) {
                     answerInput.style.backgroundColor = '#d4edda'; // Light green for correct
@@ -267,14 +298,17 @@
                 // Move to the next question
                 currentQuestionIndex++;
                 loadLocation(currentLocationIndex);
-            } else if (currentLocationIndex < locations.length - 1) {
-                // Move to the next location
+            } 
+            else if (currentLocationIndex < locations.length - 1) {
+                // Move to the "Do you want to continue?" page
                 currentQuestionIndex = 0; // Reset question index for the new location
                 currentLocationIndex++;
-                loadLocation(currentLocationIndex);
-            } else {
+                window.location.href = 'continue.html'; // Redirect to continue.html
+            } 
+            else {
                 // End of the quiz
-                window.location.href = 'congratulations.html'; // Redirect to the new page
+                localStorage.setItem('finalScore', score); // Save the final score
+                window.location.href = 'congratulations.html'; // Redirect to the congratulations page
             }
         }
 
@@ -287,6 +321,12 @@
             const formattedHours = hours % 12 || 12; // Convert to 12-hour format
             const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes; // Add leading zero if needed
             return `${formattedHours}:${formattedMinutes} ${ampm}`; // Return formatted time
+        }
+
+        // Update the score display
+        function updateScore() {
+            const scoreElement = document.getElementById('score');
+            scoreElement.textContent = score; // Update the score display
         }
 
         // Load the locations and display local time on page load
