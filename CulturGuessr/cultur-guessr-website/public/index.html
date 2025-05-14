@@ -256,5 +256,18 @@
             }, 1000);
         };
     </script>
+
+    <script>
+        // Ensure the timer bar stays on top after the map loads
+        window.addEventListener('load', () => {
+            const timerContainer = document.querySelector('.timer-container');
+            const mapIframe = document.getElementById('map');
+
+            // Reapply z-index to the timer bar after the map loads
+            mapIframe.addEventListener('load', () => {
+                timerContainer.style.zIndex = '9999';
+            });
+        });
+    </script>
 </body>
 </html>

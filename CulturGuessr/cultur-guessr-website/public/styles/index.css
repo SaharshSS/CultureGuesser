@@ -12,12 +12,13 @@ body {
 
 /* Timer Bar */
 .timer-container {
-    position: absolute;
+    position: fixed; /* Keep it fixed at the top of the viewport */
     top: 0;
     left: 0;
     width: 100%;
     height: 10px;
     background-color: #ddd;
+    z-index: 9999; /* Ensure the timer bar is always on top */
 }
 
 .timer-bar {
@@ -145,7 +146,7 @@ body {
     background-color: #45a049;
 }
 
-/* Ensure the iframe is full screen */
+/* Ensure the iframe is below the timer bar */
 iframe#map {
     position: absolute;
     top: 0;
@@ -153,4 +154,5 @@ iframe#map {
     width: 100%;
     height: 100%;
     border: none;
+    z-index: 1; /* Keep the iframe below the timer bar */
 }
