@@ -153,6 +153,29 @@ body {
     cursor: pointer; /* Change the cursor to indicate it's clickable */
 }
 
+/* Skip Button Container */
+#skipButtonContainer {
+    position: absolute;
+    bottom: 24px; /* Adjust the position closer to the bottom */
+    right: 150px; /* Adjust the position to the left of the music icon */
+    width: 80px; /* Set the size of the container */
+    height: 80px; /* Set the size of the container */
+    background-color: #4caf50; /* Green background */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Center the icon inside the container */
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Ensure it is above other elements */
+}
+
+/* Skip Button */
+#skipButton {
+    width: 65px; /* Set the icon width */
+    height: 65px; /* Set the icon height */
+    object-fit: contain; /* Ensure the image scales proportionally */
+    cursor: pointer; /* Change the cursor to indicate it's clickable */
+}
+
 /* Ensure the iframe is below other elements */
 iframe#map {
     position: absolute;
