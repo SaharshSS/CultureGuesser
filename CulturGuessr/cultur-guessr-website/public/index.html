@@ -35,9 +35,9 @@
 
     <!-- Background Music -->
     <audio id="backgroundMusic" src="assets/music.mp3" loop></audio>
-    <button id="musicControl" onclick="toggleMusic()">
-        <img id="musicIcon" src="assets/SoundStopped-01.png" alt="Sound Control" />
-    </button>
+    <div id="musicIconContainer">
+        <img id="musicIcon" src="assets/SoundStopped-01.png" alt="Sound Control" onclick="toggleMusic()" style="cursor: pointer;" />
+    </div>
 
     <script>
         let score = 0; // Initialize the score
@@ -246,7 +246,7 @@
             const music = document.getElementById('backgroundMusic');
             music.play();
             isMusicPlaying = true;
-            document.getElementById('musicControl').textContent = 'Pause Music';
+            document.getElementById('musicIcon').src = 'assets/SoundPlaying-01.png'; // Set the initial icon to "playing"
 
             // Display local time
             const localTimeElement = document.getElementById('localTime');

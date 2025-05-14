@@ -130,22 +130,27 @@ body {
     font-weight: bold;
 }
 
-/* Music Control Button */
-#musicControl {
+/* Music Icon Container */
+#musicIconContainer {
     position: absolute;
-    bottom: 30px;
-    right: 70px;
-    padding: 10px;
-    background-color: transparent; /* Remove background color */
-    border: none; /* Remove border */
-    cursor: pointer;
+    bottom: 24px; /* Slightly closer to the bottom */
+    right: 65px; /* More to the left than the bottom */
+    width: 80px; /* Set the icon width */
+    height: 80px; /* Set the icon height */
+    background-color: #4caf50; /* Green background */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Center the icon inside the container */
+    justify-content: center;
+    align-items: center;
     z-index: 100; /* Ensure it is above other elements */
 }
 
-#musicControl img {
-    width: 40px; /* Adjust the size of the icon */
-    height: 40px;
-    object-fit: contain;
+/* Music Icon */
+#musicIcon {
+    width: 75px; /* Set the icon width */
+    height: 75px; /* Set the icon height */
+    object-fit: contain; /* Ensure the image scales proportionally */
+    cursor: pointer; /* Change the cursor to indicate it's clickable */
 }
 
 /* Ensure the iframe is below other elements */
