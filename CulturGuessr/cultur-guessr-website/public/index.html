@@ -119,6 +119,23 @@
             font-size: 1.2rem;
             font-weight: bold;
         }
+        #musicControl {
+            position: absolute;
+            bottom: 30px;
+            right: 70px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #musicControl:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -148,6 +165,10 @@
     <!-- Local Time Display -->
     <div id="localTime"></div>
 
+    <!-- Background Music -->
+    <audio id="backgroundMusic" src="assets/music.mp3" loop></audio>
+    <button id="musicControl" onclick="toggleMusic()">Play Music</button>
+
     <script>
         let score = 0; // Initialize the score
         let locations = [];
@@ -155,6 +176,7 @@
         let currentQuestionIndex = 0;
         let timerInterval;
         const timerDuration = 60; // Timer duration in seconds
+        let isMusicPlaying = false;
 
         // Fetch the JSON file
         async function fetchLocations() {
@@ -329,10 +351,32 @@
             scoreElement.textContent = score; // Update the score display
         }
 
+        // Toggle background music
+        function toggleMusic() {
+            const music = document.getElementById('backgroundMusic');
+            const musicControl = document.getElementById('musicControl');
+
+            if (isMusicPlaying) {
+                music.pause();
+                musicControl.textContent = 'Play Music';
+            } else {
+                music.play();
+                musicControl.textContent = 'Pause Music';
+            }
+
+            isMusicPlaying = !isMusicPlaying;
+        }
+
         // Load the locations and display local time on page load
         window.onload = () => {
             // Fetch locations
             fetchLocations();
+
+            // Automatically play music
+            const music = document.getElementById('backgroundMusic');
+            music.play();
+            isMusicPlaying = true;
+            document.getElementById('musicControl').textContent = 'Pause Music';
 
             // Display local time
             const localTimeElement = document.getElementById('localTime');
