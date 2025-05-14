@@ -116,6 +116,12 @@
       ]
     },
     {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747244355636!6m8!1m7!1sQh69mC8CzE-L1uiqK9-v5w!2m2!1d43.31302942031704!2d-116.0279396934664!3f275.64540060601206!4f-3.5180385169296926!5f0.7820865974627469",
+        "questions": [
+          { "question": "Is the land arable?", "answer": "Yes" }
+        ]
+    },
+    {
       "location": "https://www.google.com/maps/embed?pb=!4v1747151839871!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRF8yT0tLZnc.!2m2!1d21.42254528047561!2d39.82619011687317!3f344.4510043733093!4f21.854995469316123!5f0.7820865974627469",
       "questions": [
         { "question": "What religion is shown in this landscape?", "answer": "Islam" },
@@ -130,7 +136,7 @@
       "questions": [
         { "question": "What religion is shown in this landscape?", "answer": "Islam" },
         { "question": "What language is visible?", "answer": "Arabic" },
-        { "question": "What country is this located in?", "answer": "Burundi" },
+        { "question": "What country is this located in?", "answer": "Saudi Arabia" },
         { "question": "What type of roads are visible?", "answer": "Gravel roads" },
         { "question": "What is the overall vibe of this location?", "answer": "Remote and scenic" }
       ]
@@ -162,17 +168,8 @@
           "answer": "Christianity"
         }
       ]
-    },
-    {
-      "location": "https://www.google.com/maps/embed?pb=!4v1747243783177!6m8!1m7!1sQh69mC8CzE-L1uiqK9-v5w!2m2!1d43.31302942031704!2d-116.0279396934664!3f255.84310606287286!4f0!5f0.7820865974627469",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "Is the land arable?",
-          "options": ["Yes", "No"],
-          "answer": "Yes"
-        }
-      ]
     }
+    
+      
   ]
   
