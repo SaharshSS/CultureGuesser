@@ -1,177 +1,178 @@
 [
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747101751467!6m8!1m7!1sQSYwNXfqXTISsjyq3eKstg!2m2!1d40.748817!2d-73.985428!3f249.07623803435044!4f-17.65559922099363!5f0.7820865974627469",
-        "questions": [
-            { "question": "What iconic structure can be seen from this viewpoint?", "answer": "Empire State Building" },
-            { "question": "What type of vehicle is closest to the camera?", "answer": "Yellow taxi" },
-            { "question": "What kind of transportation system is visible on the street?", "answer": "Bus" },
-            { "question": "What color are the majority of the buildings?", "answer": "Gray" },
-            { "question": "What time of day does this image appear to be?", "answer": "Daytime" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747101751467!6m8!1m7!1sQSYwNXfqXTISsjyq3eKstg!2m2!1d40.748817!2d-73.985428!3f249.07623803435044!4f-17.65559922099363!5f0.7820865974627469",
+      "questions": [
+        { "question": "What iconic structure can be seen from this viewpoint?", "answer": "Empire State Building" },
+        { "question": "What type of vehicle is closest to the camera?", "answer": "Yellow taxi" },
+        { "question": "What kind of transportation system is visible on the street?", "answer": "Bus" },
+        { "question": "What color are the majority of the buildings?", "answer": "Gray" },
+        { "question": "What time of day does this image appear to be?", "answer": "Daytime" }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747103928917!6m8!1m7!1sCPkOysrb6SXLv_xN_6O2cg!2m2!1d48.858844!2d2.294350!3f254.14535252438507!4f-16.123803559084057!5f0.7820865974627469",
-        "questions": [
-            { "question": "What famous landmark is visible in the distance?", "answer": "Eiffel Tower" },
-            { "question": "What is the primary language seen on the street signs?", "answer": "French" },
-            { "question": "What architectural style is the building near the camera?", "answer": "Classic Parisian architecture" },
-            { "question": "What is the weather like in the scene?", "answer": "Clear skies" },
-            { "question": "What type of street is visible?", "answer": "Urban street" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747103928917!6m8!1m7!1sCPkOysrb6SXLv_xN_6O2cg!2m2!1d48.858844!2d2.294350!3f254.14535252438507!4f-16.123803559084057!5f0.7820865974627469",
+      "questions": [
+        { "question": "What famous landmark is visible in the distance?", "answer": "Eiffel Tower" },
+        { "question": "What is the primary language seen on the street signs?", "answer": "French" },
+        { "question": "What architectural style is the building near the camera?", "answer": "Classic Parisian architecture" },
+        { "question": "What is the weather like in the scene?", "answer": "Clear skies" },
+        { "question": "What type of street is visible?", "answer": "Urban street" }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747152938114!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRDQ0b19CcXdF!2m2!1d39.01946079702463!2d125.7535510692188!3f191.55612559929727!4f-4.279829649158202!5f0.4000000000000002",
-        "questions": [
-            {
-                "type": "multiple-choice",
-                "question": "Which country is this landmark located in?",
-                "options": ["France", "North Korea", "Germany", "Spain"],
-                "answer": "North Korea"
-            },
-            {
-                "type": "text",
-                "question": "What is the name of this landmark?",
-                "answer": "Eiffel Tower"
-            }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747152938114!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRDQ0b19CcXdF!2m2!1d39.01946079702463!2d125.7535510692188!3f191.55612559929727!4f-4.279829649158202!5f0.4000000000000002",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Which country is this landmark located in?",
+          "options": ["France", "North Korea", "Germany", "Spain"],
+          "answer": "North Korea"
+        },
+        {
+          "type": "text",
+          "question": "What is the name of this landmark?",
+          "answer": "Juche Tower"
+        }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747105088325!6m8!1m7!1sAONzv5ddRgd7bE3nAfHzzw!2m2!1d35.675147!2d139.751595!3f188.2124825862145!4f-6.111467896203635!5f0.7820865974627469",
-        "questions": [
-            { "question": "What major landmark can be seen from here?", "answer": "Tokyo Tower" },
-            { "question": "What kind of transportation is visible?", "answer": "Train" },
-            { "question": "What language is visible on the building?", "answer": "Japanese" },
-            { "question": "What type of business is visible on the street?", "answer": "Shopping district" },
-            { "question": "What is the general vibe of the city based on the scene?", "answer": "Busy and modern" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747105088325!6m8!1m7!1sAONzv5ddRgd7bE3nAfHzzw!2m2!1d35.675147!2d139.751595!3f188.2124825862145!4f-6.111467896203635!5f0.7820865974627469",
+      "questions": [
+        { "question": "What major landmark can be seen from here?", "answer": "Tokyo Tower" },
+        { "question": "What kind of transportation is visible?", "answer": "Train" },
+        { "question": "What language is visible on the building?", "answer": "Japanese" },
+        { "question": "What type of business is visible on the street?", "answer": "Shopping district" },
+        { "question": "What is the general vibe of the city based on the scene?", "answer": "Busy and modern" }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747107338221!6m8!1m7!1sMjbX7TfGsRokosTHtI0uDA!2m2!1d-34.603684!2d-58.381559!3f273.4895571850242!4f-11.232935883168992!5f0.7820865974627469",
-        "questions": [
-            { "question": "What famous landmark is visible?", "answer": "Obelisco" },
-            { "question": "Which language is visible on the street signs?", "answer": "Spanish" },
-            { "question": "What type of vehicles are visible on the street?", "answer": "Cars and buses" },
-            { "question": "What city is this street in?", "answer": "Buenos Aires" },
-            { "question": "What time of day is it in the scene?", "answer": "Daylight" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747107338221!6m8!1m7!1sMjbX7TfGsRokosTHtI0uDA!2m2!1d-34.603684!2d-58.381559!3f273.4895571850242!4f-11.232935883168992!5f0.7820865974627469",
+      "questions": [
+        { "question": "What famous landmark is visible?", "answer": "Obelisco" },
+        { "question": "Which language is visible on the street signs?", "answer": "Spanish" },
+        { "question": "What type of vehicles are visible on the street?", "answer": "Cars and buses" },
+        { "question": "What city is this street in?", "answer": "Buenos Aires" },
+        { "question": "What time of day is it in the scene?", "answer": "Daylight" }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747109485738!6m8!1m7!1s7bp3U1UKGE_o-ROr6db8ug!2m2!1d51.507351!2d-0.127758!3f253.0413683838271!4f-11.14930815278598!5f0.7820865974627469",
-        "questions": [
-            { "question": "What famous landmark is visible?", "answer": "Big Ben" },
-            { "question": "What language is visible on the street signs?", "answer": "English" },
-            { "question": "What type of architecture is visible?", "answer": "Gothic" },
-            { "question": "What type of vehicles are visible on the street?", "answer": "Buses and cars" },
-            { "question": "What time of day is shown?", "answer": "Evening" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747109485738!6m8!1m7!1s7bp3U1UKGE_o-ROr6db8ug!2m2!1d51.507351!2d-0.127758!3f253.0413683838271!4f-11.14930815278598!5f0.7820865974627469",
+      "questions": [
+        { "question": "What famous landmark is visible?", "answer": "Big Ben" },
+        { "question": "What language is visible on the street signs?", "answer": "English" },
+        { "question": "What type of architecture is visible?", "answer": "Gothic" },
+        { "question": "What type of vehicles are visible on the street?", "answer": "Buses and cars" },
+        { "question": "What time of day is shown?", "answer": "Evening" }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747111632395!6m8!1m7!1sbZhm2NNO-5zF6hx7P21aPQ!2m2!1d40.730610!2d-73.935242!3f259.2426432124857!4f-9.035110428993852!5f0.7820865974627469",
-        "questions": [
-            { "question": "What street is this image taken from?", "answer": "Brooklyn" },
-            { "question": "What language is visible on the street signs?", "answer": "English" },
-            { "question": "What kind of buildings are visible?", "answer": "Apartment buildings" },
-            { "question": "What is the mood of the scene?", "answer": "Urban and busy" },
-            { "question": "What type of vehicles are visible?", "answer": "Cars and bikes" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747111632395!6m8!1m7!1sbZhm2NNO-5zF6hx7P21aPQ!2m2!1d40.730610!2d-73.935242!3f259.2426432124857!4f-9.035110428993852!5f0.7820865974627469",
+      "questions": [
+        { "question": "What street is this image taken from?", "answer": "Brooklyn" },
+        { "question": "What language is visible on the street signs?", "answer": "English" },
+        { "question": "What kind of buildings are visible?", "answer": "Apartment buildings" },
+        { "question": "What is the mood of the scene?", "answer": "Urban and busy" },
+        { "question": "What type of vehicles are visible?", "answer": "Cars and bikes" }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747113778369!6m8!1m7!1sNWZnK1X8uNn99dyveNEfFw!2m2!1d48.208174!2d16.373819!3f202.67822698216042!4f-7.415676254358221!5f0.7820865974627469",
-        "questions": [
-            { "question": "What famous landmark is visible?", "answer": "St. Stephen's Cathedral" },
-            { "question": "What language is visible on the street signs?", "answer": "German" },
-            { "question": "What time of day is shown?", "answer": "Morning" },
-            { "question": "What type of transportation is visible?", "answer": "Tram" },
-            { "question": "What is the atmosphere of the scene?", "answer": "Quiet and historic" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747113778369!6m8!1m7!1sNWZnK1X8uNn99dyveNEfFw!2m2!1d48.208174!2d16.373819!3f202.67822698216042!4f-7.415676254358221!5f0.7820865974627469",
+      "questions": [
+        { "question": "What famous landmark is visible?", "answer": "St. Stephen's Cathedral" },
+        { "question": "What language is visible on the street signs?", "answer": "German" },
+        { "question": "What time of day is shown?", "answer": "Morning" },
+        { "question": "What type of transportation is visible?", "answer": "Tram" },
+        { "question": "What is the atmosphere of the scene?", "answer": "Quiet and historic" }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747115934572!6m8!1m7!1sBGGvl0Fv9oEkhNh8owDCmg!2m2!1d35.682839!2d139.759455!3f312.4803930199843!4f-3.438952708062234!5f0.7820865974627469",
-        "questions": [
-            { "question": "What famous building is visible?", "answer": "Tokyo Station" },
-            { "question": "What is the weather like?", "answer": "Clear and sunny" },
-            { "question": "What type of transportation system is visible?", "answer": "Train station" },
-            { "question": "What city is this in?", "answer": "Tokyo" },
-            { "question": "What type of vehicles are visible?", "answer": "Cars and buses" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747115934572!6m8!1m7!1sBGGvl0Fv9oEkhNh8owDCmg!2m2!1d35.682839!2d139.759455!3f312.4803930199843!4f-3.438952708062234!5f0.7820865974627469",
+      "questions": [
+        { "question": "What famous building is visible?", "answer": "Tokyo Station" },
+        { "question": "What is the weather like?", "answer": "Clear and sunny" },
+        { "question": "What type of transportation system is visible?", "answer": "Train station" },
+        { "question": "What city is this in?", "answer": "Tokyo" },
+        { "question": "What type of vehicles are visible?", "answer": "Cars and buses" }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747118096782!6m8!1m7!1sZqgL0CV6pM3vH1iwmi3A0Q!2m2!1d-33.867487!2d151.206990!3f276.7598455823151!4f-9.479327210831482!5f0.7820865974627469",
-        "questions": [
-            { "question": "What landmark is visible?", "answer": "Sydney Opera House" },
-            { "question": "What time of day is it?", "answer": "Daytime" },
-            { "question": "What kind of environment is visible?", "answer": "Urban waterfront" },
-            { "question": "What language is visible on the street signs?", "answer": "English" },
-            { "question": "What is the mode of transport visible?", "answer": "Ferry" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747118096782!6m8!1m7!1sZqgL0CV6pM3vH1iwmi3A0Q!2m2!1d-33.867487!2d151.206990!3f276.7598455823151!4f-9.479327210831482!5f0.7820865974627469",
+      "questions": [
+        { "question": "What landmark is visible?", "answer": "Sydney Opera House" },
+        { "question": "What time of day is it?", "answer": "Daytime" },
+        { "question": "What kind of environment is visible?", "answer": "Urban waterfront" },
+        { "question": "What language is visible on the street signs?", "answer": "English" },
+        { "question": "What is the mode of transport visible?", "answer": "Ferry" }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747120200549!6m8!1m7!1sfRGVjgxJ4-7OSLB0sbV-Qw!2m2!1d51.165691!2d10.451526!3f208.31369540635517!4f-10.94871214011585!5f0.7820865974627469",
-        "questions": [
-            { "question": "What is the landscape like?", "answer": "Rural and green" },
-            { "question": "What type of vegetation is visible?", "answer": "Forests and grasslands" },
-            { "question": "What type of roads are visible?", "answer": "Country roads" },
-            { "question": "What country is this located in?", "answer": "Germany" },
-            { "question": "What is the overall vibe of this location?", "answer": "Peaceful and natural" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747120200549!6m8!1m7!1sfRGVjgxJ4-7OSLB0sbV-Qw!2m2!1d51.165691!2d10.451526!3f208.31369540635517!4f-10.94871214011585!5f0.7820865974627469",
+      "questions": [
+        { "question": "What is the landscape like?", "answer": "Rural and green" },
+        { "question": "What type of vegetation is visible?", "answer": "Forests and grasslands" },
+        { "question": "What type of roads are visible?", "answer": "Country roads" },
+        { "question": "What country is this located in?", "answer": "Germany" },
+        { "question": "What is the overall vibe of this location?", "answer": "Peaceful and natural" }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747151839871!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRF8yT0tLZnc.!2m2!1d21.42254528047561!2d39.82619011687317!3f344.4510043733093!4f21.854995469316123!5f0.7820865974627469",
-        "questions": [
-            { "question": "What religion is shown in this landscape", "answer": "Islam" },
-            { "question": "What language is visible", "answer": "Arabic" },
-            { "question": "What type of roads are visible?", "answer": "Country roads" },
-            { "question": "What country is this located in?", "answer": "Germany" },
-            { "question": "What is the overall vibe of this location?", "answer": "Peaceful and natural" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747151839871!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRF8yT0tLZnc.!2m2!1d21.42254528047561!2d39.82619011687317!3f344.4510043733093!4f21.854995469316123!5f0.7820865974627469",
+      "questions": [
+        { "question": "What religion is shown in this landscape?", "answer": "Islam" },
+        { "question": "What language is visible?", "answer": "Arabic" },
+        { "question": "What country is this located in?", "answer": "Saudi Arabia" },
+        { "question": "What type of roads are visible?", "answer": "Paved roads" },
+        { "question": "What is the overall vibe of this location?", "answer": "Spiritual and monumental" }
+      ]
     },
     {
-        "location": "https://www.google.com/maps/embed?pb=!4v1747152605348!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREVvclBHN2dF!2m2!1d-6.138543007305898!2d29.73298021633333!3f102.89992298772412!4f3.584793493950187!5f0.7820865974627469",
-        "questions": [
-            { "question": "What religion is shown in this landscape", "answer": "Islam" },
-            { "question": "What language is visible", "answer": "Arabic" },
-            { "question": "What type of roads are visible?", "answer": "Country roads" },
-            { "question": "What country is this located in?", "answer": "Germany" },
-            { "question": "What is the overall vibe of this location?", "answer": "Peaceful and natural" }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747152605348!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREVvclBHN2dF!2m2!1d-6.138543007305898!2d29.73298021633333!3f102.89992298772412!4f3.584793493950187!5f0.7820865974627469",
+      "questions": [
+        { "question": "What religion is shown in this landscape?", "answer": "Islam" },
+        { "question": "What language is visible?", "answer": "Arabic" },
+        { "question": "What country is this located in?", "answer": "Burundi" },
+        { "question": "What type of roads are visible?", "answer": "Gravel roads" },
+        { "question": "What is the overall vibe of this location?", "answer": "Remote and scenic" }
+      ]
     },
     {
-        "locations": "https://www.google.com/maps/embed?pb=!4v1747152282651!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJREVqT1RGT2c.!2m2!1d55.75500000335755!2d37.61889993836996!3f313.9336795889133!4f11.182058139385589!5f0.7820865974627469",
-        "questions": [
-            { "question": "What's the main religion relevant?", "answer": "Christianity"},
-            { "question": "What country are you in?", "answer": "Russia"}
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747152282651!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJREVqT1RGT2c.!2m2!1d55.75500000335755!2d37.61889993836996!3f313.9336795889133!4f11.182058139385589!5f0.7820865974627469",
+      "questions": [
+        { "question": "What's the main religion relevant?", "answer": "Christianity" },
+        { "question": "What country are you in?", "answer": "Russia" }
+      ]
     },
     {
-        "locations": "https://www.google.com/maps/embed?pb=!4v1747164283882!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzJqYWJWZUE.!2m2!1d41.90296878343602!2d12.45448479329444!3f345.1100300713851!4f28.47450255565687!5f0.4000000000000002",
-        "questions": [
-            {
-                "type": "multiple-choice",
-                "question": "Based on the art, in which country are you located?",
-                "options": ["United States", "Italy", "Israel", "Vatican City"],
-                "answer": "Vatican City"
-            },
-            {
-                "type": "text",
-                "question": "What is the name of this landmark?",
-                "answer": "Sistine Chapel"
-            },
-            {
-                "type": "text",
-                "question": "What is the most relevant religion to this site?",
-                "answer": "Christianity"
-            }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747164283882!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzJqYWJWZUE.!2m2!1d41.90296878343602!2d12.45448479329444!3f345.1100300713851!4f28.47450255565687!5f0.4000000000000002",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Based on the art, in which country are you located?",
+          "options": ["United States", "Italy", "Israel", "Vatican City"],
+          "answer": "Vatican City"
+        },
+        {
+          "type": "text",
+          "question": "What is the name of this landmark?",
+          "answer": "Sistine Chapel"
+        },
+        {
+          "type": "text",
+          "question": "What is the most relevant religion to this site?",
+          "answer": "Christianity"
+        }
+      ]
     },
     {
-        "locations": "https://www.google.com/maps/embed?pb=!4v1747165105504!6m8!1m7!1sAwINSfGeLcPtOwWtr5-Lzg!2m2!1d43.3130832857634!2d-116.0278403233357!3f124.88602800350256!4f-6.494565067818371!5f0.4000000000000002",
-        "questions": [
-            {
-                "type": "multiple-choice",
-                "question": "Is the land arable?",
-                "options": ["Yes", "No"],
-                "answer": "Yes"
-            }
-        ]
+      "location": "https://www.google.com/maps/embed?pb=!4v1747243783177!6m8!1m7!1sQh69mC8CzE-L1uiqK9-v5w!2m2!1d43.31302942031704!2d-116.0279396934664!3f255.84310606287286!4f0!5f0.7820865974627469",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Is the land arable?",
+          "options": ["Yes", "No"],
+          "answer": "Yes"
+        }
+      ]
     }
-]
+  ]
+  
