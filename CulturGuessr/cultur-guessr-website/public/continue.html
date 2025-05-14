@@ -9,8 +9,10 @@
 <body>
     <h1>Do you want to continue?</h1>
     <div class="button-container">
-        <button onclick="location.href='index.html'">Yes</button>
-        <button class="no-button" onclick="location.href='congratulations.html'">No</button>
+        <!-- Redirect to loading.html with index.html as the target -->
+        <button onclick="location.href='loading.html?target=index.html'">Yes</button>
+        <!-- Redirect to loading.html with congratulations.html as the target -->
+        <button class="no-button" onclick="location.href='loading.html?target=congratulations.html'">No</button>
     </div>
 </body>
 </html>

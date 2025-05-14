@@ -44,6 +44,51 @@
         <img id="musicIcon" src="assets/SoundStopped-01.png" alt="Sound Control" onclick="toggleMusic()" style="cursor: pointer;" />
     </div>
 
+    <script>
+        function redirectToLoading(targetPage) {
+            // Redirect to the loading page with the target page as a query parameter
+            window.location.href = `loading.html?target=${targetPage}`;
+        }
+
+        function nextQuestion() {
+            const locationData = locations[currentLocationIndex];
+
+            if (currentQuestionIndex < locationData.questions.length - 1) {
+                // Move to the next question
+                currentQuestionIndex++;
+                loadLocation(currentLocationIndex);
+            } else if (currentLocationIndex < locations.length - 1) {
+                // All questions for the current location are completed
+                // Redirect to the "Do you want to continue?" page
+                currentQuestionIndex = 0; // Reset question index for the new location
+                window.location.href = 'continue.html'; // Redirect to continue.html
+            } else {
+                // End of the quiz
+                localStorage.setItem('finalScore', score); // Save the final score
+                window.location.href = 'congratulations.html'; // Redirect to the congratulations page
+            }
+        }
+
+        function skipQuestion() {
+            const locationData = locations[currentLocationIndex];
+
+            if (currentQuestionIndex < locationData.questions.length - 1) {
+                // Move to the next question
+                currentQuestionIndex++;
+                loadLocation(currentLocationIndex);
+            } else if (currentLocationIndex < locations.length - 1) {
+                // All questions for the current location are skipped
+                // Redirect to the "Do you want to continue?" page
+                currentQuestionIndex = 0; // Reset question index for the new location
+                currentLocationIndex++; // Move to the next location
+                window.location.href = 'continue.html'; // Redirect to continue.html
+            } else {
+                // End of the quiz
+                localStorage.setItem('finalScore', score); // Save the final score
+                window.location.href = 'congratulations.html'; // Redirect to the congratulations page
+            }
+        }
+    </script>
     <script src="scripts/index.js"></script>
 </body>
 </html>
