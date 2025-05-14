@@ -35,7 +35,9 @@
 
     <!-- Background Music -->
     <audio id="backgroundMusic" src="assets/music.mp3" loop></audio>
-    <button id="musicControl" onclick="toggleMusic()">Play Music</button>
+    <button id="musicControl" onclick="toggleMusic()">
+        <img id="musicIcon" src="assets/SoundStopped-01.png" alt="Sound Control" />
+    </button>
 
     <script>
         let score = 0; // Initialize the score
@@ -222,14 +224,14 @@
         // Toggle background music
         function toggleMusic() {
             const music = document.getElementById('backgroundMusic');
-            const musicControl = document.getElementById('musicControl');
+            const musicIcon = document.getElementById('musicIcon');
 
             if (isMusicPlaying) {
                 music.pause();
-                musicControl.textContent = 'Play Music';
+                musicIcon.src = 'assets/SoundStopped-01.png'; // Change to "stopped" icon
             } else {
                 music.play();
-                musicControl.textContent = 'Pause Music';
+                musicIcon.src = 'assets/SoundPlaying-01.png'; // Change to "playing" icon
             }
 
             isMusicPlaying = !isMusicPlaying;

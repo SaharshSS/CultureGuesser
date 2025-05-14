@@ -8,9 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(90deg, #2c3e50 25%, #ecf0f1 25%, #ecf0f1 75%, #2c3e50 75%), 
-                linear-gradient(#2c3e50 25%, #ecf0f1 25%, #ecf0f1 75%, #2c3e50 75%);
-    background-size: 50px 50px; /* Adjust the size of the road pattern */
+    background-color: #4caf50;
     color: white;
     font-family: 'Press Start 2P', Arial, sans-serif;
     text-align: center;

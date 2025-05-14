@@ -135,19 +135,17 @@ body {
     position: absolute;
     bottom: 30px;
     right: 70px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    padding: 10px;
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 100; /* Ensure the music button is above the iframe */
+    z-index: 100; /* Ensure it is above other elements */
 }
 
-#musicControl:hover {
-    background-color: #45a049;
+#musicControl img {
+    width: 40px; /* Adjust the size of the icon */
+    height: 40px;
+    object-fit: contain;
 }
 
 /* Ensure the iframe is below other elements */
