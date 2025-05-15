@@ -4,9 +4,7 @@
       "questions": [
         { "question": "What iconic structure can be seen from this viewpoint?", "answer": "Empire State Building", "hint": "It's one of the tallest buildings in New York City." },
         { "question": "What type of vehicle is closest to the camera?", "answer": "Yellow taxi", "hint": "These vehicles are iconic to New York City." },
-        { "question": "What kind of transportation system is visible on the street?", "answer": "Bus", "hint": "It's a common public transportation vehicle." },
-        { "question": "What color are the majority of the buildings?", "answer": "Gray", "hint": "The buildings are made of concrete and steel." },
-        { "question": "What time of day does this image appear to be?", "answer": "Daytime", "hint": "The sun is shining, and the streets are well-lit." }
+        { "question": "What kind of transportation system is visible on the street?", "answer": "Bus", "hint": "It's a common public transportation vehicle." }
       ]
     },
     {
@@ -43,8 +41,7 @@
         { "question": "What major landmark can be seen from here?", "answer": "Tokyo Tower", "hint": "It's a red and white tower in Japan's capital." },
         { "question": "What kind of transportation is visible?", "answer": "Train", "hint": "It's a common mode of public transportation in Japan." },
         { "question": "What language is visible on the building?", "answer": "Japanese", "hint": "This is the official language of Japan." },
-        { "question": "What type of business is visible on the street?", "answer": "Shopping district", "hint": "This area is known for retail stores and shops." },
-        { "question": "What is the general vibe of the city based on the scene?", "answer": "Busy and modern", "hint": "The city is bustling with activity and has a contemporary feel." }
+        { "question": "What type of business is visible on the street?", "answer": "Shopping district", "hint": "This area is known for retail stores and shops." }
       ]
     },
     {
@@ -53,8 +50,7 @@
         { "question": "What famous landmark is visible?", "answer": "Obelisco", "hint": "It's a tall monument in Buenos Aires." },
         { "question": "Which language is visible on the street signs?", "answer": "Spanish", "hint": "This is the official language of Argentina." },
         { "question": "What type of vehicles are visible on the street?", "answer": "Cars and buses", "hint": "These are common modes of transportation in cities." },
-        { "question": "What city is this street in?", "answer": "Buenos Aires", "hint": "This is the capital city of Argentina." },
-        { "question": "What time of day is it in the scene?", "answer": "Daylight", "hint": "The sun is shining brightly." }
+        { "question": "What city is this street in?", "answer": "Buenos Aires", "hint": "This is the capital city of Argentina." }
       ]
     },
     {
@@ -62,9 +58,7 @@
       "questions": [
         { "question": "What famous landmark is visible?", "answer": "Big Ben" },
         { "question": "What language is visible on the street signs?", "answer": "English" },
-        { "question": "What type of architecture is visible?", "answer": "Gothic" },
-        { "question": "What type of vehicles are visible on the street?", "answer": "Buses and cars" },
-        { "question": "What time of day is shown?", "answer": "Evening" }
+        { "question": "What type of vehicles are visible on the street?", "answer": "Buses and cars" }
       ]
     },
     {
@@ -73,7 +67,6 @@
         { "question": "What street is this image taken from?", "answer": "Brooklyn" },
         { "question": "What language is visible on the street signs?", "answer": "English" },
         { "question": "What kind of buildings are visible?", "answer": "Apartment buildings" },
-        { "question": "What is the mood of the scene?", "answer": "Urban and busy" },
         { "question": "What type of vehicles are visible?", "answer": "Cars and bikes" }
       ]
     },
@@ -83,8 +76,7 @@
         { "question": "What famous landmark is visible?", "answer": "St. Stephen's Cathedral" },
         { "question": "What language is visible on the street signs?", "answer": "German" },
         { "question": "What time of day is shown?", "answer": "Morning" },
-        { "question": "What type of transportation is visible?", "answer": "Tram" },
-        { "question": "What is the atmosphere of the scene?", "answer": "Quiet and historic" }
+        { "question": "What type of transportation is visible?", "answer": "Tram" }
       ]
     },
     {
@@ -101,7 +93,6 @@
       "location": "https://www.google.com/maps/embed?pb=!4v1747118096782!6m8!1m7!1sZqgL0CV6pM3vH1iwmi3A0Q!2m2!1d-33.867487!2d151.206990!3f276.7598455823151!4f-9.479327210831482!5f0.7820865974627469",
       "questions": [
         { "question": "What landmark is visible?", "answer": "Sydney Opera House" },
-        { "question": "What time of day is it?", "answer": "Daytime" },
         { "question": "What kind of environment is visible?", "answer": "Urban waterfront" },
         { "question": "What language is visible on the street signs?", "answer": "English" },
         { "question": "What is the mode of transport visible?", "answer": "Ferry" }
@@ -110,7 +101,7 @@
     {
       "location": "https://www.google.com/maps/embed?pb=!4v1747120200549!6m8!1m7!1sfRGVjgxJ4-7OSLB0sbV-Qw!2m2!1d51.165691!2d10.451526!3f208.31369540635517!4f-10.94871214011585!5f0.7820865974627469",
       "questions": [
-        { "question": "What is the landscape like?", "answer": "Rural and green" },
+        { "question": "What is the landscape like?", "answer": "Rural" },
         { "question": "What type of vegetation is visible?", "answer": "Forests and grasslands" },
         { "question": "What type of roads are visible?", "answer": "Country roads" },
         { "question": "What country is this located in?", "answer": "Germany" },
@@ -120,7 +111,7 @@
     {
         "location": "https://www.google.com/maps/embed?pb=!4v1747244355636!6m8!1m7!1sQh69mC8CzE-L1uiqK9-v5w!2m2!1d43.31302942031704!2d-116.0279396934664!3f275.64540060601206!4f-3.5180385169296926!5f0.7820865974627469",
         "questions": [
-          { "question": "Is the land arable?", "answer": "Yes" }
+          { "question": "Is the land arable?", "answer": "No" }
         ]
     },
     {
@@ -128,9 +119,7 @@
       "questions": [
         { "question": "What religion is shown in this landscape?", "answer": "Islam" },
         { "question": "What language is visible?", "answer": "Arabic" },
-        { "question": "What country is this located in?", "answer": "Saudi Arabia" },
-        { "question": "What type of roads are visible?", "answer": "Paved roads" },
-        { "question": "What is the overall vibe of this location?", "answer": "Spiritual and monumental" }
+        { "question": "What country is this located in?", "answer": "Saudi Arabia" }
       ]
     },
     {
@@ -138,9 +127,7 @@
       "questions": [
         { "question": "What religion is shown in this landscape?", "answer": "Islam" },
         { "question": "What language is visible?", "answer": "Arabic" },
-        { "question": "What country is this located in?", "answer": "Saudi Arabia" },
-        { "question": "What type of roads are visible?", "answer": "Gravel roads" },
-        { "question": "What is the overall vibe of this location?", "answer": "Remote and scenic" }
+        { "question": "What country is this located in?", "answer": "Saudi Arabia" }
       ]
     },
     {
