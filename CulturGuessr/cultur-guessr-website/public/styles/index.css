@@ -176,54 +176,6 @@ body {
     cursor: pointer; /* Change the cursor to indicate it's clickable */
 }
 
-/* Hint Button Container */
-#hintButtonContainer {
-    position: absolute;
-    bottom: 24px; /* Adjust the position closer to the bottom */
-    right: 150px; /* Adjust the position to the left of the music icon */
-    width: 80px; /* Set the size of the container */
-    height: 80px; /* Set the size of the container */
-    background-color: #4caf50; /* Green background */
-    border-radius: 10px; /* Rounded corners */
-    display: flex; /* Center the icon inside the container */
-    justify-content: center;
-    align-items: center;
-    z-index: 100; /* Ensure it is above other elements */
-}
-
-/* Hint Button Icon */
-#hintButton {
-    width: 65px; /* Set the icon width */
-    height: 65px; /* Set the icon height */
-    object-fit: contain; /* Ensure the image scales proportionally */
-    cursor: pointer; /* Change the cursor to indicate it's clickable */
-}
-
-/* Hint Popup */
-#hintPopup {
-    position: absolute;
-    bottom: 160px; /* Adjust position above the hint button */
-    right: 40px; /* Align with the hint button */
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    max-width: 200px;
-    z-index: 200;
-    display: none; /* Initially hidden */
-}
-
-#hintPopup p {
-    margin: 0;
-    text-align: center;
-}
-
-/* Show the popup when visible */
-#hintPopup.visible {
-    display: block;
-}
-
 /* Ensure the iframe is below other elements */
 iframe#map {
     position: absolute;
