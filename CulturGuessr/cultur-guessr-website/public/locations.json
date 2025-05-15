@@ -159,13 +159,25 @@
       ]
     },
     {
-      "location": "https://maps.google.com/?q=Eiffel+Tower",
+      "location": "https://www.google.com/maps/embed?pb=!4v1747326607863!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRHZrX2plM0FF!2m2!1d31.23967364336032!2d121.4961191669711!3f112.12948460718133!4f-6.086286972923858!5f0.7820865974627469",
       "questions": [
         {
-            "question": "What is this landmark?",
-            "answer": "eiffel tower",
-            "hint": "It's located in Paris, France."
+          "type": "multiple-choice",
+          "question": "Is this city a world city?",
+          "options": ["Yes", "No"],
+          "answer": "Yes"
+        },
+        {
+          "type": "text",
+          "question": "Is this is a megacity or a metacity?",
+          "answer": "Metacity"
         }
       ]
-    }
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747326936093!6m8!1m7!1s7QuNZavRzilZuGXmIM3Emw!2m2!1d-22.97060465141644!2d-43.42129156563846!3f201.24635736993866!4f-0.811373501185173!5f0.7820865974627469",
+      "questions": [
+        { "question": "What is the current economic situation of this area?", "answer": "Economic disparity" }
+      ]
+    },
   ]
