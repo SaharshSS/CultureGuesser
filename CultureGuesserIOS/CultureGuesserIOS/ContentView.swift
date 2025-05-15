@@ -15,26 +15,56 @@ struct ContentView: View {
             Color(hex: "#4caf50")
                 .edgesIgnoringSafeArea(.all)
 
-            ZStack {
-                Image("Globe-01")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 175, height: 175)
+            VStack(spacing: 30) {
+                ZStack {
+                    Image("Globe-01")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 300, height: 300)
 
-                Image("People-01")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 150, height: 150)
-                    .rotationEffect(.degrees(rotate ? 360 : 0))
-                    .animation(Animation.linear(duration: 4).repeatForever(autoreverses: false), value: rotate)
-                    .onAppear {
-                        rotate = true
-                    }
+                    Image("People-01")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 300, height: 300)
+                        .rotationEffect(.degrees(rotate ? 360 : 0))
+                        .animation(Animation.linear(duration: 5).repeatForever(autoreverses: false), value: rotate)
+                        .onAppear {
+                            rotate = true
+                        }
+                }
+
+                Text("CulturGuessr")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+
+                Text("Test your knowledge of cultures and landmarks around the world!")
+                    .font(.body)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 40)
+
+                Button(action: startQuiz) {
+                    Text("Start Quiz")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding(.vertical, 15)
+                        .padding(.horizontal, 30)
+                        .background(Color.black.opacity(0.7))
+                        .cornerRadius(5)
+                }
             }
+            .padding()
         }
+    }
+
+    func startQuiz() {
+        print("Start Quiz tapped!")
+        // You can add navigation or functionality here
     }
 }
 
+// Hex color extension
 extension Color {
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
