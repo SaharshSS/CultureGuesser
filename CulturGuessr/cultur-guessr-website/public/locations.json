@@ -2,21 +2,21 @@
     {
       "location": "https://www.google.com/maps/embed?pb=!4v1747101751467!6m8!1m7!1sQSYwNXfqXTISsjyq3eKstg!2m2!1d40.748817!2d-73.985428!3f249.07623803435044!4f-17.65559922099363!5f0.7820865974627469",
       "questions": [
-        { "question": "What iconic structure can be seen from this viewpoint?", "answer": "Empire State Building" },
-        { "question": "What type of vehicle is closest to the camera?", "answer": "Yellow taxi" },
-        { "question": "What kind of transportation system is visible on the street?", "answer": "Bus" },
-        { "question": "What color are the majority of the buildings?", "answer": "Gray" },
-        { "question": "What time of day does this image appear to be?", "answer": "Daytime" }
+        { "question": "What iconic structure can be seen from this viewpoint?", "answer": "Empire State Building", "hint": "It's one of the tallest buildings in New York City." },
+        { "question": "What type of vehicle is closest to the camera?", "answer": "Yellow taxi", "hint": "These vehicles are iconic to New York City." },
+        { "question": "What kind of transportation system is visible on the street?", "answer": "Bus", "hint": "It's a common public transportation vehicle." },
+        { "question": "What color are the majority of the buildings?", "answer": "Gray", "hint": "The buildings are made of concrete and steel." },
+        { "question": "What time of day does this image appear to be?", "answer": "Daytime", "hint": "The sun is shining, and the streets are well-lit." }
       ]
     },
     {
       "location": "https://www.google.com/maps/embed?pb=!4v1747103928917!6m8!1m7!1sCPkOysrb6SXLv_xN_6O2cg!2m2!1d48.858844!2d2.294350!3f254.14535252438507!4f-16.123803559084057!5f0.7820865974627469",
       "questions": [
-        { "question": "What famous landmark is visible in the distance?", "answer": "Eiffel Tower" },
-        { "question": "What is the primary language seen on the street signs?", "answer": "French" },
-        { "question": "What architectural style is the building near the camera?", "answer": "Classic Parisian architecture" },
-        { "question": "What is the weather like in the scene?", "answer": "Clear skies" },
-        { "question": "What type of street is visible?", "answer": "Urban street" }
+        { "question": "What famous landmark is visible in the distance?", "answer": "Eiffel Tower", "hint": "It's a famous iron structure in Paris." },
+        { "question": "What is the primary language seen on the street signs?", "answer": "French", "hint": "This is the official language of France." },
+        { "question": "What architectural style is the building near the camera?", "answer": "Classic Parisian architecture", "hint": "Think of the iconic style of Paris buildings." },
+        { "question": "What is the weather like in the scene?", "answer": "Clear skies", "hint": "There are no clouds in the sky." },
+        { "question": "What type of street is visible?", "answer": "Urban street", "hint": "It's a busy street in a city." }
       ]
     },
     {
@@ -26,33 +26,35 @@
           "type": "multiple-choice",
           "question": "Which country is this landmark located in?",
           "options": ["France", "North Korea", "Germany", "Spain"],
-          "answer": "North Korea"
+          "answer": "North Korea",
+          "hint": "This country is known for its strict regime and is located in East Asia."
         },
         {
           "type": "text",
           "question": "What is the name of this landmark?",
-          "answer": "Juche Tower"
+          "answer": "Juche Tower",
+          "hint": "It's a monument dedicated to the Juche ideology."
         }
       ]
     },
     {
       "location": "https://www.google.com/maps/embed?pb=!4v1747105088325!6m8!1m7!1sAONzv5ddRgd7bE3nAfHzzw!2m2!1d35.675147!2d139.751595!3f188.2124825862145!4f-6.111467896203635!5f0.7820865974627469",
       "questions": [
-        { "question": "What major landmark can be seen from here?", "answer": "Tokyo Tower" },
-        { "question": "What kind of transportation is visible?", "answer": "Train" },
-        { "question": "What language is visible on the building?", "answer": "Japanese" },
-        { "question": "What type of business is visible on the street?", "answer": "Shopping district" },
-        { "question": "What is the general vibe of the city based on the scene?", "answer": "Busy and modern" }
+        { "question": "What major landmark can be seen from here?", "answer": "Tokyo Tower", "hint": "It's a red and white tower in Japan's capital." },
+        { "question": "What kind of transportation is visible?", "answer": "Train", "hint": "It's a common mode of public transportation in Japan." },
+        { "question": "What language is visible on the building?", "answer": "Japanese", "hint": "This is the official language of Japan." },
+        { "question": "What type of business is visible on the street?", "answer": "Shopping district", "hint": "This area is known for retail stores and shops." },
+        { "question": "What is the general vibe of the city based on the scene?", "answer": "Busy and modern", "hint": "The city is bustling with activity and has a contemporary feel." }
       ]
     },
     {
       "location": "https://www.google.com/maps/embed?pb=!4v1747107338221!6m8!1m7!1sMjbX7TfGsRokosTHtI0uDA!2m2!1d-34.603684!2d-58.381559!3f273.4895571850242!4f-11.232935883168992!5f0.7820865974627469",
       "questions": [
-        { "question": "What famous landmark is visible?", "answer": "Obelisco" },
-        { "question": "Which language is visible on the street signs?", "answer": "Spanish" },
-        { "question": "What type of vehicles are visible on the street?", "answer": "Cars and buses" },
-        { "question": "What city is this street in?", "answer": "Buenos Aires" },
-        { "question": "What time of day is it in the scene?", "answer": "Daylight" }
+        { "question": "What famous landmark is visible?", "answer": "Obelisco", "hint": "It's a tall monument in Buenos Aires." },
+        { "question": "Which language is visible on the street signs?", "answer": "Spanish", "hint": "This is the official language of Argentina." },
+        { "question": "What type of vehicles are visible on the street?", "answer": "Cars and buses", "hint": "These are common modes of transportation in cities." },
+        { "question": "What city is this street in?", "answer": "Buenos Aires", "hint": "This is the capital city of Argentina." },
+        { "question": "What time of day is it in the scene?", "answer": "Daylight", "hint": "The sun is shining brightly." }
       ]
     },
     {
@@ -168,8 +170,15 @@
           "answer": "Christianity"
         }
       ]
+    },
+    {
+      "location": "https://maps.google.com/?q=Eiffel+Tower",
+      "questions": [
+        {
+            "question": "What is this landmark?",
+            "answer": "eiffel tower",
+            "hint": "It's located in Paris, France."
+        }
+      ]
     }
-    
-      
   ]
-  
