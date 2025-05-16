@@ -146,9 +146,33 @@
       "questions": [
         { "question": "What famous landmark is this?", "answer": "Colosseum" 
         },
-        { "question": "What country is this in?", "answer": "Rome"
+        { "question": "What city is this in?", "answer": "Rome"
         },
           {"question": "What is the weather in this area?", "answer": "Cloudy"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747415123467!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzQwcFRXUEE.!2m2!1d41.28221627080994!2d16.41844979095439!3f65.61458857407243!4f-5.000131529938969!5f0.7820865974627469",
+      "questions": [
+        { "question": "What type of building is this?", "answer": "Cathedral" 
+        },
+        { "question": "What country is this in?", "answer": "Italy"
+        },
+          {"question": "What is the relegion relevant to this site?", "answer": "Christianity"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747415562987!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDQzYTdjUVE.!2m2!1d13.03355710216289!2d80.26959746018129!3f105.95632494937647!4f-1.8583020037358153!5f0.7820865974627469",
+      "questions": [
+        { "question": "What type of building is this?", "answer": "Temple" 
+        },
+        { "question": "What country is this in?", "answer": "Imdia"
+        },
+          {"question": "What is the relegion relevant to this site?", "answer": "Hinduism"
+        },
+          {"question": "Is the religion relevant to the site a universalising religion or ethnic religion?", "answer": "Ethnic"
         }
       ]
     }
