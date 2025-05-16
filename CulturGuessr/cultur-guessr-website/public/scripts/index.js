@@ -214,26 +214,6 @@ function toggleMusic() {
     isMusicPlaying = !isMusicPlaying;
 }
 
-// Show hint for the current question
-function showHint() {
-    const hintPopup = document.getElementById('hintPopup');
-    const hintText = document.getElementById('hintText');
-
-    // Get the current question's hint
-    const currentQuestion = locations[currentLocationIndex].questions[currentQuestionIndex];
-    const hint = currentQuestion.hint || "No hint available for this question.";
-
-    // Update the hint text
-    hintText.textContent = hint;
-
-    // Toggle the visibility of the hint popup
-    if (hintPopup.classList.contains('visible')) {
-        hintPopup.classList.remove('visible');
-    } else {
-        hintPopup.classList.add('visible');
-    }
-}
-
 // Load the locations and display local time on page load
 window.onload = () => {
     // Fetch locations
