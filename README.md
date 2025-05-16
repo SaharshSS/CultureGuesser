@@ -16,3 +16,5 @@ Step 2: When in the codespace, go into the terminal if it is not already open
 Step 3: Type the following command into the terminal **python3 -m http.server 8080**
 
 Step 4: A notification should pop up on the right side of the computer about opening a new tab. Just click it!
+
+Step 5: Make sure the URL ends with .dev**/CulturGuessr/cultur-guessr-website/public/home.html**
