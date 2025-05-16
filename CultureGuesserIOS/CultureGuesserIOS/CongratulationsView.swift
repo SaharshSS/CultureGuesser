@@ -30,7 +30,7 @@ struct CongratulationsView: View {
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(Color.green)
+                            .background(Color.black)
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }

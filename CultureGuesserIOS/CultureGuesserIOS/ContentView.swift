@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var rotate = false
     @State private var startQuiz = false
+    @State private var showSettings = false
 
     var body: some View {
         NavigationStack {
@@ -11,6 +12,8 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
 
                 VStack(spacing: 30) {
+                    Spacer().frame(height: 40) // ⬅️ Add top space below settings icon
+
                     ZStack {
                         Image("Globe-01")
                             .resizable()
@@ -27,7 +30,7 @@ struct ContentView: View {
                                 rotate = true
                             }
                     }
- 
+
                     Text("CulturGuessr")
                         .font(.custom("Futura", size: 28))
                         .foregroundColor(.white)
@@ -50,12 +53,33 @@ struct ContentView: View {
                             .background(Color.black.opacity(0.7))
                             .cornerRadius(5)
                     }
+
+                    Spacer()
                 }
                 .padding()
+
+                // ✅ Floating settings icon in top-right
+                VStack {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            showSettings = true
+                        }) {
+                            Image("SettingsIcon-01")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .padding()
+                        }
+                    }
+                    Spacer()
+                }
             }
-            .navigationBarBackButtonHidden(true) // Hide back button here
+            .navigationBarBackButtonHidden(true)
             .navigationDestination(isPresented: $startQuiz) {
                 IndexView()
+            }
+            .navigationDestination(isPresented: $showSettings) {
+                SettingsView()
             }
         }
     }
