@@ -14,6 +14,27 @@
 
     <!-- Google Maps Embed -->
     <iframe id="map" src="" allowfullscreen></iframe>
+    <!-- Top Left Box to Cover Google Maps Indicator -->
+    <div class="top-left-box"></div>
+
+    <style>
+    .top-left-box {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 180px;
+    height: 60px;
+    background-color: #3498db;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 10; /* Make sure it's above the map */
+    }
+
+    #map {
+    position: relative; /* or absolute/fixed if needed */
+    z-index: 1; /* Lower than .top-left-box */
+    }
+    </style>
 
     <!-- Question Box -->
     <div class="question-box">
