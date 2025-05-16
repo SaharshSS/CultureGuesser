@@ -125,5 +125,20 @@
       "questions": [
         { "question": "What is the current economic situation of this area?", "answer": "Economic disparity" }
       ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747411622071!6m8!1m7!1sCAoSHENJQUJJaEFHYnphcVFTZG1PbWdMQ0lRQURNQnQ.!2m2!1d40.43190768264349!2d116.5703748790251!3f253.71000797128116!4f-21.03822231442578!5f0.4000000000000002",
+      "questions": [
+        { "question": "What famous landmark is this?", "answer": "Great Wall of China" 
+        },
+          {
+          "type": "multiple-choice",
+          "question": "What type of boundary is this?",
+          "options": ["Relic Boundary", "Subsequent Boundary", "Geometric Boundary", "Consquent Boundary"],
+          "answer": "Relic Boundary"
+        },
+          {"question": "What is the weather in this area?", "answer": "Cloudy"
+        }
+      ]
     }
   ]
