@@ -17,4 +17,4 @@ Step 3: Type the following command into the terminal **python3 -m http.server 80
 
 Step 4: A notification should pop up on the right side of the computer about opening a new tab. Just click it!
 
-Step 5: Make sure the URL ends with .dev**/CulturGuessr/cultur-guessr-website/public/home.html**
+Step 5: Make sure the URL ends with **.dev/CulturGuessr/cultur-guessr-website/public/home.html**
