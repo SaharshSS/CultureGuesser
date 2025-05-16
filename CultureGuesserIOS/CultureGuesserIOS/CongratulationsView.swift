@@ -4,41 +4,43 @@ struct CongratulationsView: View {
     @State private var navigateToContentView = false
 
     var body: some View {
-        Color(hex: "#4caf50")
-            .edgesIgnoringSafeArea(.all)
         NavigationStack {
-            VStack(spacing: 30) {
-                Spacer()
+            ZStack {
                 Color(hex: "#4caf50")
-                    .edgesIgnoringSafeArea(.all)
-                Text("🎉 Congratulations! 🎉")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
+                    .edgesIgnoringSafeArea(.all) // fill full screen
+                
+                VStack(spacing: 30) {
+                    Spacer()
+                    
+                    Text("🎉 Congratulations! 🎉")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
 
-                Text("Great job completing the quiz!")
-                    .font(.title2)
-                    .multilineTextAlignment(.center)
+                    Text("Great job completing the quiz!")
+                        .font(.title2)
+                        .multilineTextAlignment(.center)
 
-                Spacer()
+                    Spacer()
 
-                Button(action: {
-                    navigateToContentView = true
-                }) {
-                    Text("Play Again")
-                        .font(.headline)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                    Button(action: {
+                        navigateToContentView = true
+                    }) {
+                        Text("Play Again")
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .padding(.horizontal, 40)
+
+                    Spacer()
                 }
-                .padding(.horizontal, 40)
-
-                Spacer()
+                .padding()
             }
-            .padding()
-            .navigationBarBackButtonHidden(true) // <-- Hide back button here
+            .navigationBarBackButtonHidden(true)
             .navigationDestination(isPresented: $navigateToContentView) {
                 ContentView()
             }
