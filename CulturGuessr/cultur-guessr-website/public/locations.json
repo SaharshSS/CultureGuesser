@@ -29,8 +29,7 @@
       "location": "https://www.google.com/maps/embed?pb=!4v1747113778369!6m8!1m7!1sNWZnK1X8uNn99dyveNEfFw!2m2!1d48.208174!2d16.373819!3f202.67822698216042!4f-7.415676254358221!5f0.7820865974627469",
       "questions": [
         { "question": "What famous landmark is visible?", "answer": "St. Stephen's Cathedral" },
-        { "question": "What language is visible on the street signs?", "answer": "German" },
-        { "question": "What type of transportation is visible?", "answer": "Tram" }
+        { "question": "What language is visible on the street signs?", "answer": "German" }
       ]
     },
     {
@@ -47,7 +46,6 @@
       "location": "https://www.google.com/maps/embed?pb=!4v1747120200549!6m8!1m7!1sfRGVjgxJ4-7OSLB0sbV-Qw!2m2!1d51.165691!2d10.451526!3f208.31369540635517!4f-10.94871214011585!5f0.7820865974627469",
       "questions": [
         { "question": "What is the landscape like?", "answer": "Rural" },
-        { "question": "What type of vegetation is visible?", "answer": "Forests and grasslands" },
         { "question": "What type of roads are visible?", "answer": "Country roads" },
         { "question": "What country is this located in?", "answer": "Germany" }
       ]
