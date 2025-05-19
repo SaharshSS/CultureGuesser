@@ -53,7 +53,8 @@
     {
         "location": "https://www.google.com/maps/embed?pb=!4v1747244355636!6m8!1m7!1sQh69mC8CzE-L1uiqK9-v5w!2m2!1d43.31302942031704!2d-116.0279396934664!3f275.64540060601206!4f-3.5180385169296926!5f0.7820865974627469",
         "questions": [
-          { "question": "Is the land arable?", "answer": "No" }
+          { "question": "Is the land arable?", "answer": "No" },
+          { "question": "What climate region is this area a part of?", "answer": "Dry Climate" }
         ]
     },
     {
