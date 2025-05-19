@@ -1,48 +1,18 @@
 import SwiftUI
 
 struct CongratulationsView: View {
-    @State private var navigateToContentView = false
+    var playerScores: [Player]
 
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Color(hex: "#4caf50")
-                    .edgesIgnoringSafeArea(.all) // fill full screen
-                
-                VStack(spacing: 30) {
-                    Spacer()
-                    
-                    Text("🎉 Congratulations! 🎉")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.center)
-
-                    Text("Great job completing the quiz!")
-                        .font(.title2)
-                        .multilineTextAlignment(.center)
-
-                    Spacer()
-
-                    Button(action: {
-                        navigateToContentView = true
-                    }) {
-                        Text("Play Again")
-                            .font(.headline)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.black)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                    .padding(.horizontal, 40)
-
-                    Spacer()
-                }
+        VStack {
+            Text("🎉 Game Over! 🎉")
+                .font(.largeTitle)
                 .padding()
-            }
-            .navigationBarBackButtonHidden(true)
-            .navigationDestination(isPresented: $navigateToContentView) {
-                ContentView()
+
+            ForEach(playerScores, id: \.name) { player in
+                Text("\(player.name): \(player.score) points")
+                    .font(.title2)
+                    .padding()
             }
         }
     }

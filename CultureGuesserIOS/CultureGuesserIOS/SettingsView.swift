@@ -1,10 +1,9 @@
 import SwiftUI
-import AVFoundation
 
 struct SettingsView: View {
     @State private var isMultiplayer = false
     @State private var isSoundOn = true
-    @State private var audioPlayer: AVAudioPlayer?
+    @StateObject private var soundPlayer = SoundPlayer()
 
     var body: some View {
         ZStack {
@@ -27,17 +26,18 @@ struct SettingsView: View {
                     }
 
                     Section {
-                        Toggle(isOn: Binding(
-                            get: { isSoundOn },
-                            set: { newValue in
-                                isSoundOn = newValue
-                                toggleSound()
-                            })
-                        ) {
+                        Toggle(isOn: $isSoundOn) {
                             HStack {
                                 Text("Sound")
                                 Spacer()
                                 Image(systemName: isSoundOn ? "speaker.wave.2.fill" : "speaker.slash.fill")
+                            }
+                        }
+                        .onChange(of: isSoundOn) { value in
+                            if value {
+                                soundPlayer.playBackgroundMusic()
+                            } else {
+                                soundPlayer.stopBackgroundMusic()
                             }
                         }
                         .toggleStyle(SwitchToggleStyle(tint: .white))
@@ -49,25 +49,8 @@ struct SettingsView: View {
         }
         .onAppear {
             if isSoundOn {
-                toggleSound()
+                soundPlayer.playBackgroundMusic()
             }
-        }
-    }
-
-    func toggleSound() {
-        if isSoundOn {
-            if let path = Bundle.main.path(forResource: "music", ofType: "mp3") {
-                let url = URL(fileURLWithPath: path)
-                do {
-                    audioPlayer = try AVAudioPlayer(contentsOf: url)
-                    audioPlayer?.numberOfLoops = -1
-                    audioPlayer?.play()
-                } catch {
-                    print("Error loading music: \(error.localizedDescription)")
-                }
-            }
-        } else {
-            audioPlayer?.stop()
         }
     }
 }
