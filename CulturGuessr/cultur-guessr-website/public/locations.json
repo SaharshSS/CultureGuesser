@@ -54,7 +54,12 @@
         "location": "https://www.google.com/maps/embed?pb=!4v1747244355636!6m8!1m7!1sQh69mC8CzE-L1uiqK9-v5w!2m2!1d43.31302942031704!2d-116.0279396934664!3f275.64540060601206!4f-3.5180385169296926!5f0.7820865974627469",
         "questions": [
           { "question": "Is the land arable?", "answer": "No" },
-          { "question": "What climate region is this area a part of?", "answer": "Dry Climate" }
+          {
+          "type": "multiple-choice",
+          "question": "What climate region is this area a part of?",
+          "options": ["Tropical Climate", "Mediterranean Climate", "Dry Climate", "Moderate Climate"],
+          "answer": "Dry Climate"
+          }
         ]
     },
     {
@@ -62,7 +67,7 @@
       "questions": [
         { "question": "What religion is shown in this landscape?", "answer": "Islam" },
         { "question": "What language is visible?", "answer": "Arabic" },
-        { "question": "What country is this located in?", "answer": "Saudi Arabia" }
+        { "question": "What country is this located in?", "answer": "Saudi Arabia"}
       ]
     },
     {
@@ -106,13 +111,13 @@
       "questions": [
         {
           "type": "multiple-choice",
-          "question": "Is this city a world city?",
+          "question": "Is this city (Shanghai) a world city?",
           "options": ["Yes", "No"],
           "answer": "Yes"
         },
         {
           "type": "text",
-          "question": "Is this is a megacity or a metacity?",
+          "question": "Is this city a megacity or a metacity? (Population: 24.87M)",
           "answer": "Metacity"
         }
       ]
