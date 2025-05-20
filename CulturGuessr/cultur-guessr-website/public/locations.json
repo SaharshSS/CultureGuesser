@@ -22,7 +22,12 @@
       "questions": [
         { "question": "What famous landmark is visible?", "answer": "Big Ben" },
         { "question": "What language is visible on the street signs?", "answer": "English" },
-        { "question": "What type of vehicles are visible on the street?", "answer": "Buses and cars" }
+        {
+          "type": "multiple-choice",
+          "question": "What type of vehicles are visible on the street?",
+          "options": ["Motorcycles", "Buses and Cars", "Cars", "Train"],
+          "answer": "Buses and Cars"
+        }
       ]
     },
     {
@@ -116,8 +121,9 @@
           "answer": "Yes"
         },
         {
-          "type": "text",
+          "type": "multiple-choice",
           "question": "Is this city a megacity or a metacity? (Population: 24.87M)",
+          "options": ["Megacity", "Metacity"],
           "answer": "Metacity"
         }
       ]
@@ -125,7 +131,12 @@
     {
       "location": "https://www.google.com/maps/embed?pb=!4v1747326936093!6m8!1m7!1s7QuNZavRzilZuGXmIM3Emw!2m2!1d-22.97060465141644!2d-43.42129156563846!3f201.24635736993866!4f-0.811373501185173!5f0.7820865974627469",
       "questions": [
-        { "question": "What is the current economic situation of this area?", "answer": "Economic disparity" }
+        {
+          "type": "multiple-choice",
+          "question": "What is the current economic situation of this area?",
+          "options": ["Economic disparity", "Economic Equality"],
+          "answer": "Economic disparity"
+        }
       ]
     },
     {
@@ -133,7 +144,7 @@
       "questions": [
         { "question": "What famous landmark is this?", "answer": "Great Wall of China" 
         },
-          {
+        {
           "type": "multiple-choice",
           "question": "What type of boundary is this?",
           "options": ["Relic Boundary", "Subsequent Boundary", "Geometric Boundary", "Consquent Boundary"],
@@ -168,13 +179,26 @@
     {
       "location": "https://www.google.com/maps/embed?pb=!4v1747757524496!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ2xnS0hwamdF!2m2!1d14.09355980834441!2d74.48394561996946!3f163.20498856533914!4f25.34916414496105!5f0.7820865974627469",
       "questions": [
-        { "question": "What type of building is this?", "answer": "Temple" 
+        {
+          "type": "multiple-choice",
+          "question": "What type of building is this located in?",
+          "options": ["Office", "Religious", "Residential", "None"],
+          "answer": "Religious"
         },
-        { "question": "What country is this in?", "answer": "India"
+        {
+          "question": "What country is this in?", "answer": "India"
         },
-          {"question": "What is the relegion relevant to this site?", "answer": "Hinduism"
+        {
+          "type": "multiple-choice",
+          "question": "What is the religion most relative to this site?",
+          "options": ["Hinduism", "Sikhism", "Bhuddism", "Christianity"],
+          "answer": "Hiduism"
         },
-          {"question": "Is the religion relevant to the site a universalising religion or ethnic religion?", "answer": "Ethnic"
+        {
+          "type": "multiple-choice",
+          "question": "Is the religion relevant to the site a universalising religion or ethnic religion?",
+          "options": ["Ethnic", "Universalizing"],
+          "answer": "Ethnic"
         }
       ]
     },
