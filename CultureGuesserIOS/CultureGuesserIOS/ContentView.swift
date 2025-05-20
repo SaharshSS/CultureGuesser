@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var rotate = false
+    @State private var fastRotate = false
     @State private var startQuiz = false
     @State private var showSettings = false
 
@@ -12,7 +13,7 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
 
                 VStack(spacing: 30) {
-                    Spacer().frame(height: 40) // ⬅️ Add top space below settings icon
+                    Spacer().frame(height: 40) // Top spacing below settings icon
 
                     ZStack {
                         Image("Globe-01")
@@ -25,7 +26,11 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 300, height: 300)
                             .rotationEffect(.degrees(rotate ? 360 : 0))
-                            .animation(Animation.linear(duration: 5).repeatForever(autoreverses: false), value: rotate)
+                            .animation(
+                                Animation.linear(duration: fastRotate ? 0.5 : 5)
+                                    .repeatForever(autoreverses: false),
+                                value: rotate
+                            )
                             .onAppear {
                                 rotate = true
                             }
@@ -43,9 +48,15 @@ struct ContentView: View {
                         .padding(.horizontal, 40)
 
                     Button(action: {
-                        startQuiz = true
+                        // Trigger fast rotation
+                        fastRotate = true
+                        
+                        // After 1 second, navigate to quiz
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            startQuiz = true
+                        }
                     }) {
-                        Text("Start Quiz")
+                        Text("Start Game")
                             .font(.custom("Futura", size: 20))
                             .foregroundColor(.white)
                             .padding(.vertical, 15)
@@ -58,7 +69,7 @@ struct ContentView: View {
                 }
                 .padding()
 
-                // ✅ Floating settings icon in top-right
+                // Floating settings icon in top-right corner
                 VStack {
                     HStack {
                         Spacer()
