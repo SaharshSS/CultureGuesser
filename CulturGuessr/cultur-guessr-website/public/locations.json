@@ -189,10 +189,13 @@
           "question": "What country is this in?", "answer": "India"
         },
         {
+          "question": "What stage of develpment is this country in?", "answer": "3"
+        },
+        {
           "type": "multiple-choice",
           "question": "What is the religion most relative to this site?",
-          "options": ["Hinduism", "Sikhism", "Bhuddism", "Christianity"],
-          "answer": "Hiduism"
+          "options": ["Hinduism", "Sikhism", "Buddhism", "Christianity"],
+          "answer": "Hinduism"
         },
         {
           "type": "multiple-choice",
@@ -232,6 +235,68 @@
           "question": "This is the headquarters for which supranational organization?",
           "options": ["NATO", "NAFTA", "EU"],
           "answer": "EU"
+        }
+      ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747772002041!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ09rWUxZb0FF!2m2!1d7.827576295354521!2d98.31284229010672!3f352.8372231611948!4f-32.51895526635681!5f0.7820865974627469",
+        "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Which country is this landmark located in?",
+          "options": ["Cambodia", "Korea", "Thailand", "Laos"],
+          "answer": "Thailand",
+          "hint": "This country is known for its beaches and food."
+        },
+        {
+          "type": "text",
+          "question": "What religion is shown in this landscape?",
+          "answer": "Buddhism",
+          "hint": "It's a monument dedicated to Siddharta Gautama."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Is this religion universalizing or ethnic?",
+          "options": ["Universalizing", "Ethnic", "Both", "Neither"],
+          "answer": "Ethnic"
+        },
+        {
+          "type": "text",
+          "question": "What climate is shown in this landscape?",
+          "answer": "Tropical"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747772634037!6m8!1m7!1sM6TwDQ-uiwYsDF-mszvOnQ!2m2!1d43.87549632396735!2d-111.3158887110951!3f21.24868046681194!4f1.1405677804553704!5f0.7820865974627469",
+        "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What ring of the Von Thunen model is this location in?",
+          "options": ["1", "2", "3", "4", "5"],
+          "answer": "4"
+        },
+        {
+          "type": "text",
+          "question": "What process explains why more people are moving to such environments?",
+          "answer": "Counterurbanization"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747774192821!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRFU1SVdFTHc.!2m2!1d42.92975999156078!2d-122.0634995235598!3f180!4f0!5f0.7820865974627469",
+        "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "The people are traveling on a boat, what does this show?",
+          "options": ["Environmental Determinism", "Possibilism"],
+          "answer": "Possibilism"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "This natural area is protected. What does that say about the government's values?",
+          "options": ["Values Nature", "Values Urban Areas", "Values Kids"],
+          "answer": "Values Nature"
         }
       ]
     }

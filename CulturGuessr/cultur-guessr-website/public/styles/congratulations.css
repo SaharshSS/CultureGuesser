@@ -8,9 +8,16 @@ body {
     height: 100vh;
     background-color: #4caf50;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', Arial, sans-serif;
     font-size: 2rem;
     text-align: center;
+}
+h1 {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    font-size: 1.5rem;
 }
 button {
     padding: 15px 30px;
