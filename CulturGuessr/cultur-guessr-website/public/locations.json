@@ -76,14 +76,6 @@
       ]
     },
     {
-      "location": "https://www.google.com/maps/embed?pb=!4v1747152605348!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREVvclBHN2dF!2m2!1d-6.138543007305898!2d29.73298021633333!3f102.89992298772412!4f3.584793493950187!5f0.7820865974627469",
-      "questions": [
-        { "question": "What religion is shown in this landscape?", "answer": "Islam" },
-        { "question": "What language is visible?", "answer": "Arabic" },
-        { "question": "What country is this located in?", "answer": "Saudi Arabia" }
-      ]
-    },
-    {
       "location": "https://www.google.com/maps/embed?pb=!4v1747152282651!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJREVqT1RGT2c.!2m2!1d55.75500000335755!2d37.61889993836996!3f313.9336795889133!4f11.182058139385589!5f0.7820865974627469",
       "questions": [
         { "question": "What's the main religion relevant?", "answer": "Christianity" },
