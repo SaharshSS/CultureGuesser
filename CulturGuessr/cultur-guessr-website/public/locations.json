@@ -20,7 +20,9 @@
     {
       "location": "https://www.google.com/maps/embed?pb=!4v1747109485738!6m8!1m7!1s7bp3U1UKGE_o-ROr6db8ug!2m2!1d51.507351!2d-0.127758!3f253.0413683838271!4f-11.14930815278598!5f0.7820865974627469",
       "questions": [
-        { "question": "What famous landmark is visible?", "answer": "Big Ben" },
+        { "question": "What famous landmark is visible?", "answer": "Big Ben" 
+          "hint": "This landmark is located in London." 
+        },
         { "question": "What language is visible on the street signs?", "answer": "English" },
         {
           "type": "multiple-choice",
@@ -33,7 +35,10 @@
     {
       "location": "https://www.google.com/maps/embed?pb=!4v1747113778369!6m8!1m7!1sNWZnK1X8uNn99dyveNEfFw!2m2!1d48.208174!2d16.373819!3f202.67822698216042!4f-7.415676254358221!5f0.7820865974627469",
       "questions": [
-        { "question": "What type of religious building is visual?", "answer": "Cathedral" },
+        { "type": "multiple_choice", 
+          "question": "What type of religious building is visual?", 
+          "options": ["Church", "Cathedral", "Temple"],
+          "answer": "Cathedral" },
         { "question": "What language is visible on the street signs?", "answer": "German" }
       ]
     },
