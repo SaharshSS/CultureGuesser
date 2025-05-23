@@ -41,7 +41,10 @@
       "location": "https://www.google.com/maps/embed?pb=!4v1747115934572!6m8!1m7!1sBGGvl0Fv9oEkhNh8owDCmg!2m2!1d35.682839!2d139.759455!3f312.4803930199843!4f-3.438952708062234!5f0.7820865974627469",
       "questions": [
         { "question": "What famous building is visible?", "answer": "Tokyo Station" },
-        { "question": "What is the weather like?", "answer": "Clear and sunny" },
+        { "type": "multiple-choice",
+            "question": "What is the weather like?", 
+            "options": ["Clear and sunny", "Cloudy", "Partly Cloudy", "Rainy"],
+            "answer": "Clear and sunny" },
         { "question": "What type of transportation system is visible?", "answer": "Train station" },
         { "question": "What city is this in?", "answer": "Tokyo" },
         { "question": "What type of vehicles are visible?", "answer": "Cars and buses" }
