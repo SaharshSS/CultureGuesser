@@ -317,8 +317,8 @@
         {
           "type": "multiple-choice",
           "question": "What is the purpose of such structure?",
-          "options": ["Change the environment", "Keep water levels constant", "Create energy sustaianably", "Use energy before anyone else does"],
-          "answer": "Create energy sustaianably"
+          "options": ["Change the environment", "Keep water levels constant", "Create energy sustainably", "Use energy before anyone else does"],
+          "answer": "Create energy sustainably"
         },
         {
           "type": "text",
