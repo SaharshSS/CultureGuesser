@@ -178,7 +178,9 @@
           "options": ["Temple", "Synagogue", "Mosk", "Cathedral"],
           "answer": "Cathedral"
         },
-        {"question": "What is the relegion relevant to this site?", "answer": "Christianity"
+        { "question": "What country is this in?", "answer": "Italy"
+        },
+          {"question": "What is the religion relevant to this site?", "answer": "Christianity"
         }
       ]
     },
