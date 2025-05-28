@@ -299,5 +299,16 @@
           "answer": "Values Nature"
         }
       ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1748452906826!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ2V6cjJKdFFF!2m2!1d69.35875325504507!2d88.18704003081875!3f140.15159548431654!4f-60.93853048296656!5f0.4000000000000002",
+        "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What type of zoning is present?",
+          "options": ["residential zoning", "commercial zoning", "industrial zoning"],
+          "answer": "industrial zoning"
+        }
+      ]
     }
   ]
