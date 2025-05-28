@@ -50,17 +50,24 @@
             "question": "What is the weather like?", 
             "options": ["Clear and sunny", "Cloudy", "Partly Cloudy", "Rainy"],
             "answer": "Clear and sunny" },
-        { "question": "What type of transportation system is visible?", "answer": "Train station" },
         { "question": "What city is this in?", "answer": "Tokyo" },
-        { "question": "What type of vehicles are visible?", "answer": "Cars and buses" }
+        { "type": "multiple-choice",
+            "question": "What type of vehicles are visible?", 
+            "options": ["Cars", "Busses", "Boats", "Motorcycles"],
+            "answer": "Busses" }
       ]
     },
     {
       "location": "https://www.google.com/maps/embed?pb=!4v1747120200549!6m8!1m7!1sfRGVjgxJ4-7OSLB0sbV-Qw!2m2!1d51.165691!2d10.451526!3f208.31369540635517!4f-10.94871214011585!5f0.7820865974627469",
       "questions": [
-        { "question": "What is the landscape like?", "answer": "Rural" },
-        { "question": "What type of roads are visible?", "answer": "Country roads" },
-        { "question": "What country is this located in?", "answer": "Germany" }
+        { "type": "multiple-choice",
+            "question": "Is this an urban, or rural environment?", 
+            "options": ["Urban", "Rural"],
+            "answer": "Rural" },
+        { "type": "multiple-choice",
+            "question": "What type of roads are visible?", 
+            "options": ["Gravel Roads", "Dirt Roads", "Paved Roads", "No Roads"],
+            "answer": "Paved Roads" }
       ]
     },
     {
@@ -135,7 +142,8 @@
           "type": "multiple-choice",
           "question": "What is the current economic situation of this area?",
           "options": ["Economic disparity", "Economic Equality"],
-          "answer": "Economic disparity"
+          "answer": "Economic disparity",
+          "hint": "Significant wealth gap is visible in the area."
         }
       ]
     },
@@ -149,8 +157,6 @@
           "question": "What type of boundary is this?",
           "options": ["Relic Boundary", "Subsequent Boundary", "Geometric Boundary", "Consquent Boundary"],
           "answer": "Relic Boundary"
-        },
-          {"question": "What is the weather in this area?", "answer": "Cloudy"
         }
       ]
     },
@@ -160,19 +166,19 @@
         { "question": "What famous landmark is this?", "answer": "Colosseum" 
         },
         { "question": "What city is this in?", "answer": "Rome"
-        },
-          {"question": "What is the weather in this area?", "answer": "Cloudy"
         }
       ]
     },
     {
       "location": "https://www.google.com/maps/embed?pb=!4v1747415123467!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzQwcFRXUEE.!2m2!1d41.28221627080994!2d16.41844979095439!3f65.61458857407243!4f-5.000131529938969!5f0.7820865974627469",
       "questions": [
-        { "question": "What type of building is this?", "answer": "Cathedral" 
+        {
+          "type": "multiple-choice",
+          "question": "What type of building is this?",
+          "options": ["Temple", "Synagogue", "Mosk", "Cathedral"],
+          "answer": "Cathedral"
         },
-        { "question": "What country is this in?", "answer": "Italy"
-        },
-          {"question": "What is the relegion relevant to this site?", "answer": "Christianity"
+        {"question": "What is the relegion relevant to this site?", "answer": "Christianity"
         }
       ]
     },
@@ -189,7 +195,7 @@
           "question": "What country is this in?", "answer": "India"
         },
         {
-          "question": "What stage of develpment is this country in?", "answer": "3"
+          "question": "What stage in the DTM is this country (India) in?", "answer": "3"
         },
         {
           "type": "multiple-choice",
@@ -199,7 +205,7 @@
         },
         {
           "type": "multiple-choice",
-          "question": "Is the religion relevant to the site a universalising religion or ethnic religion?",
+          "question": "Is the religion (Hinduism) relevant to the site a universalising religion or ethnic religion?",
           "options": ["Ethnic", "Universalizing"],
           "answer": "Ethnic"
         }
@@ -234,7 +240,8 @@
           "type": "multiple-choice",
           "question": "This is the headquarters for which supranational organization?",
           "options": ["NATO", "NAFTA", "EU"],
-          "answer": "EU"
+          "answer": "EU",
+          "hint": "This organization is based in Europe and focuses on economic and political integration."
         }
       ]
     },
@@ -244,9 +251,9 @@
         {
           "type": "multiple-choice",
           "question": "Which country is this landmark located in?",
-          "options": ["Cambodia", "Korea", "Thailand", "Laos"],
+          "options": ["United Kingdom", "Kenya", "Thailand", "United States"],
           "answer": "Thailand",
-          "hint": "This country is known for its beaches and food."
+          "hint": "This country is known for its beaches and food, and is located in Aisa."
         },
         {
           "type": "text",
@@ -256,13 +263,14 @@
         },
         {
           "type": "multiple-choice",
-          "question": "Is this religion universalizing or ethnic?",
+          "question": "Is this religion (Buddhism) universalizing or ethnic?",
           "options": ["Universalizing", "Ethnic", "Both", "Neither"],
-          "answer": "Ethnic"
+          "answer": "Universalizing"
         },
         {
-          "type": "text",
+          "type": "multiple-choice",
           "question": "What climate is shown in this landscape?",
+          "options": ["Tropical", "Dry", "Moderate", "Continental"],
           "answer": "Tropical"
         }
       ]
@@ -274,12 +282,8 @@
           "type": "multiple-choice",
           "question": "What ring of the Von Thunen model is this location in?",
           "options": ["1", "2", "3", "4", "5"],
-          "answer": "4"
-        },
-        {
-          "type": "text",
-          "question": "What process explains why more people are moving to such environments?",
-          "answer": "Counterurbanization"
+          "answer": "4",
+          "hint": "This area has a lot of field crops and grains."
         }
       ]
     },
@@ -295,7 +299,7 @@
         {
           "type": "multiple-choice",
           "question": "This natural area is protected. What does that say about the government's values?",
-          "options": ["Values Nature", "Values Urban Areas", "Values Kids"],
+          "options": ["Values Nature", "Values Urban Areas", "Values Kids", "Values Wealth"],
           "answer": "Values Nature"
         }
       ]
@@ -318,7 +322,8 @@
           "type": "multiple-choice",
           "question": "What is the purpose of such structure?",
           "options": ["Change the environment", "Keep water levels constant", "Create energy sustainably", "Use energy before anyone else does"],
-          "answer": "Create energy sustainably"
+          "answer": "Create energy sustainably",
+          "hint": "This structure is used to harness the power of water flow."
         },
         {
           "type": "text",
