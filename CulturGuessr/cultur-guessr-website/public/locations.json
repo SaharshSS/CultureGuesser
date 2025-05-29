@@ -371,5 +371,17 @@
           "answer": "Ms. Smith"
         }
       ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1748549758741!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRDY2WVR1N1FF!2m2!1d-69.00674719635578!2d39.57812498009512!3f215.61459739251853!4f-10.290993004971654!5f0.7820865974627469",
+      "questions":[
+        {
+          "type": "multiple-choice",
+          "question": "Where is this located?",
+          "options": ["India", "Antarctica", "Mexico", "Australia"],
+          "answer": "Antarctica",
+          "hint": "Notice the extreme cold and lack of vegetation."
+        }
+      ]
     }
   ]
