@@ -175,10 +175,14 @@
         {
           "type": "multiple-choice",
           "question": "What type of building is this?",
-          "options": ["Temple", "Synagogue", "Mosk", "Cathedral"],
+          "options": ["Temple", "Synagogue", "Mosque", "Cathedral"],
           "answer": "Cathedral"
         },
-        { "question": "What country is this in?", "answer": "Italy"
+        {
+          "type": "multiple-choice",
+          "question": "What country is this most likely in?",
+          "options": ["Pakistan", "Italy", "Afghanistan", "Chad"],
+          "answer": "Italy"
         },
           {"question": "What is the religion relevant to this site?", "answer": "Christianity"
         }
