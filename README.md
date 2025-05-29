@@ -2,6 +2,8 @@
 
 CulturGuessr is an interactive web-based quiz game that tests your knowledge of cultures and landmarks from around the world. Built with HTML, CSS, and JavaScript, it provides a fun and engaging way to learn about global cultures and their relation to their surroundings.
 
+## Now live at: https://saharshss.github.io/CultureGuesser/CulturGuessr/cultur-guessr-website/public/home.html
+
 ## Features
 
 - **Interactive Quiz**: Test your knowledge of world cultures and landmarks.
