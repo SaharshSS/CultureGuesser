@@ -53,8 +53,8 @@
         { "question": "What city is this in?", "answer": "Tokyo" },
         { "type": "multiple-choice",
             "question": "What type of vehicles are visible?", 
-            "options": ["Cars", "Busses", "Boats", "Motorcycles"],
-            "answer": "Busses" }
+            "options": ["Cars", "Buses", "Boats", "Motorcycles"],
+            "answer": "Buses" }
       ]
     },
     {
@@ -316,8 +316,25 @@
         {
           "type": "multiple-choice",
           "question": "What type of zoning is present?",
-          "options": ["residential zoning", "commercial zoning", "industrial zoning"],
-          "answer": "industrial zoning"
+          "options": ["Residential zoning", "Commercial zoning", "Industrial zoning"],
+          "answer": "Industrial zoning"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1748453491809!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ2hsS2J3a0FF!2m2!1d36.01608436842615!2d-114.7369011754237!3f213.0086587804809!4f8.448568441725996!5f0.7820865974627469",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of such structure?",
+          "options": ["Change the environment", "Keep water levels constant", "Create energy sustainably", "Use energy before anyone else does"],
+          "answer": "Create energy sustainably",
+          "hint": "This structure is used to harness the power of water flow."
+        },
+        {
+          "type": "text",
+          "question": "What type of structure is observed?",
+          "answer": "Dam"
         }
       ]
     },
