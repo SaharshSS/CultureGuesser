@@ -11,7 +11,7 @@ Go to: https://saharshss.github.io/CultureGuesser/CulturGuessr/cultur-guessr-web
 - **Responsive Design**: Optimized for desktop and mobile devices.
 - **Dynamic Navigation**: Start the quiz with a single click and explore different questions.
 
-## Launching the Project
+## Launching the Project (Development Only)
 _Step 1_: Create or join a codespace by clicking **<> Code** and choosing the **Codespaces** tab and click **Create codespace on main**
 
 _Step 2_: When in the codespace, go into the terminal if it is not already open
