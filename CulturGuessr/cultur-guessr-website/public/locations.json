@@ -398,6 +398,13 @@
           "options": ["India", "Antarctica", "Mexico", "Australia"],
           "answer": "Antarctica",
           "hint": "Notice the extreme cold and lack of vegetation."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Compared to the rest of the continent, how does the population density in this area compare?",
+          "opsions": ["Higher", "Lower", "Same"],
+          "answer": "Higher",
+          "hint": "This area has a research station, which indicates people live here temporarily."
         }
       ]
     }
