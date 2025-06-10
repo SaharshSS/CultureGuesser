@@ -402,7 +402,7 @@
         {
           "type": "multiple-choice",
           "question": "Compared to the rest of the continent, how does the population density in this area compare?",
-          "opsions": ["Higher", "Lower", "Same"],
+          "options": ["Higher", "Lower", "Same"],
           "answer": "Higher",
           "hint": "This area has a research station, which indicates people live here temporarily."
         }

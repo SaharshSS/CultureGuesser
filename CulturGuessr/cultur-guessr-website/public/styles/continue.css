@@ -45,3 +45,16 @@ button:hover {
 .no-button:hover {
     background-color: #d32f2f;
 }
+
+.score-display {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: white;
+}
+
+#currentScore {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1.5em;
+}

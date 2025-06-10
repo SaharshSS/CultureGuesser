@@ -6,16 +6,53 @@ let timerInterval;
 const timerDuration = 60; // Timer duration in seconds
 let isMusicPlaying = false;
 
+// Initialize everything when the page loads
+window.onload = async function() {
+    // Restore score from localStorage if it exists
+    const savedScore = localStorage.getItem('currentScore');
+    if (savedScore) {
+        score = parseInt(savedScore);
+        updateScore(); // Update the score display
+    }
+
+    try {
+        // Fetch locations first
+        await fetchLocations();
+
+        // Automatically play music
+        const music = document.getElementById('backgroundMusic');
+        music.play().catch(() => console.log('Auto-play prevented'));
+        isMusicPlaying = true;
+        document.getElementById('musicIcon').src = 'assets/SoundPlaying-01.png';
+
+        // Display local time
+        const localTimeElement = document.getElementById('localTime');
+        localTimeElement.textContent = `Local Time: ${getUserLocalTime()}`;
+
+        // Update the local time every second
+        setInterval(() => {
+            localTimeElement.textContent = `Local Time: ${getUserLocalTime()}`;
+        }, 1000);
+    } catch (error) {
+        console.error('Error initializing game:', error);
+    }
+};
+
 // Fetch the JSON file
 async function fetchLocations() {
-    const response = await fetch('locations.json');
-    locations = await response.json();
+    try {
+        const response = await fetch('locations.json');
+        if (!response.ok) throw new Error('Failed to fetch locations');
+        locations = await response.json();
 
-    // Shuffle the locations array
-    shuffleArray(locations);
+        // Shuffle the locations array
+        shuffleArray(locations);
 
-    // Load the first location
-    loadLocation(currentLocationIndex);
+        // Load the first location
+        loadLocation(currentLocationIndex);
+    } catch (error) {
+        console.error('Error fetching locations:', error);
+    }
 }
 
 // Shuffle the array using Fisher-Yates algorithm
@@ -68,46 +105,74 @@ function handleTimeOut() {
 
 // Load the current location and its first question
 function loadLocation(index) {
-    const locationData = locations[index];
-    const iframe = document.getElementById('map');
-    const questionLabel = document.getElementById('questionLabel');
-    const answerInputContainer = document.getElementById('answerInputContainer');
-    const nextButton = document.getElementById('nextButton');
+    try {
+        const locationData = locations[index];
+        const iframe = document.getElementById('map');
+        const questionLabel = document.getElementById('questionLabel');
+        const answerInputContainer = document.getElementById('answerInputContainer');
+        const nextButton = document.getElementById('nextButton');
 
-    // Set the map iframe
-    iframe.src = locationData.location;
+        // Set the map iframe
+        iframe.src = locationData.location;
 
-    // Get the current question
-    const currentQuestion = locationData.questions[currentQuestionIndex];
-    questionLabel.textContent = currentQuestion.question;
+        // Get the current question
+        const currentQuestion = locationData.questions[currentQuestionIndex];
+        questionLabel.textContent = currentQuestion.question;
 
-    // Clear previous inputs
-    answerInputContainer.innerHTML = '';
-    nextButton.style.display = 'none';
+        // Clear previous inputs
+        answerInputContainer.innerHTML = '';
+        nextButton.style.display = 'none';
 
-    if (currentQuestion.type === 'multiple-choice') {
-        // Render multiple-choice options
-        const optionsDiv = document.createElement('div');
-        optionsDiv.className = 'options';
-        currentQuestion.options.forEach(option => {
-            const button = document.createElement('button');
-            button.textContent = option;
-            button.onclick = () => checkAnswer(option);
-            optionsDiv.appendChild(button);
-        });
-        answerInputContainer.appendChild(optionsDiv);
-    } else {
-        // Render text input
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.id = 'answerInput';
-        input.placeholder = 'Type your answer here...';
-        input.oninput = () => checkAnswer(input.value);
-        answerInputContainer.appendChild(input);
+        if (currentQuestion.type === 'multiple-choice') {
+            // Render multiple-choice options
+            const optionsDiv = document.createElement('div');
+            optionsDiv.className = 'options';
+            currentQuestion.options.forEach(option => {
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.onclick = () => checkAnswer(option);
+                optionsDiv.appendChild(button);
+            });
+            answerInputContainer.appendChild(optionsDiv);
+        } else {
+            // Render text input
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.id = 'answerInput';
+            input.placeholder = 'Type your answer here...';
+            input.oninput = () => checkAnswer(input.value);
+            answerInputContainer.appendChild(input);
+        }
+
+        // Start the timer for the current question
+        startTimer();
+    } catch (error) {
+        console.error('Error loading location:', error);
     }
+}
 
-    // Start the timer for the current question
-    startTimer();
+// Show hint function
+function showHint() {
+    try {
+        const locationData = locations[currentLocationIndex];
+        const currentQuestion = locationData.questions[currentQuestionIndex];
+        const hintPopup = document.getElementById('hintPopup');
+        const hintText = document.getElementById('hintText');
+        
+        if (currentQuestion.hint) {
+            hintText.textContent = currentQuestion.hint;
+        } else {
+            hintText.textContent = "No hint available for this question.";
+        }
+        hintPopup.classList.add('show');
+    } catch (error) {
+        console.error('Error showing hint:', error);
+    }
+}
+
+function closeHint() {
+    const hintPopup = document.getElementById('hintPopup');
+    hintPopup.classList.remove('show');
 }
 
 // Check the user's answer
@@ -126,7 +191,7 @@ function checkAnswer(userAnswer) {
 
     if (userAnswer === correctAnswer) {
         score += 1000; // Add 1000 points for each correct answer
-        localStorage.setItem('finalScore', score); // Save the final score
+        localStorage.setItem('currentScore', score.toString()); // Save the current score
         updateScore(); // Update the score display
         nextButton.style.display = 'block'; // Show the Next button
         if (answerInput) {
@@ -213,24 +278,3 @@ function toggleMusic() {
 
     isMusicPlaying = !isMusicPlaying;
 }
-
-// Load the locations and display local time on page load
-window.onload = () => {
-    // Fetch locations
-    fetchLocations();
-
-    // Automatically play music
-    const music = document.getElementById('backgroundMusic');
-    music.play();
-    isMusicPlaying = true;
-    document.getElementById('musicIcon').src = 'assets/SoundPlaying-01.png'; // Set the initial icon to "playing"
-
-    // Display local time
-    const localTimeElement = document.getElementById('localTime');
-    localTimeElement.textContent = `Local Time: ${getUserLocalTime()}`;
-
-    // Update the local time every second
-    setInterval(() => {
-        localTimeElement.textContent = `Local Time: ${getUserLocalTime()}`;
-    }, 1000);
-};

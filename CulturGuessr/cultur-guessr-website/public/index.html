@@ -17,30 +17,72 @@
 
     <!-- Top Left Box to Cover Google Maps Indicator -->
     <div class="top-left-box">
-  <button
-    style="width:100%;height:100%;background:transparent;border:none;color:white;font-size:16px;cursor:pointer;"
-    onclick="window.location.href='congratulations.html'"
-  >
-    Finish!
-  </button>
-</div>
+        <button
+            style="width:100%;height:100%;background:transparent;border:none;color:white;font-size:16px;cursor:pointer;"
+            onclick="window.location.href='congratulations.html'"
+        >
+            Finish!
+        </button>
+    </div>
 
     <style>
     .top-left-box {
-    position: absolute;
-    top: 10px;
-    left: 0px;
-    width: 300px;
-    height: 60px;
-    background-color: #3498db;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    z-index: 10; /* Make sure it's above the map */
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        width: 300px;
+        height: 60px;
+        background-color: #3498db;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        z-index: 10; /* Make sure it's above the map */
     }
 
     #map {
-    position: relative; /* or absolute/fixed if needed */
-    z-index: 1; /* Lower than .top-left-box */
+        position: relative; /* or absolute/fixed if needed */
+        z-index: 1; /* Lower than .top-left-box */
+    }
+
+    /* Add styles for the button container */
+    .game-buttons-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Style for hint popup */
+    .hint-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+        color: white;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .hint-popup.show {
+        display: block;
+    }
+
+    .hint-popup button {
+        margin-top: 15px;
+        padding: 8px 16px;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .hint-popup button:hover {
+        background-color: #45a049;
     }
     </style>
 
@@ -53,9 +95,14 @@
         <button class="next-button" id="nextButton" onclick="nextQuestion()">Next</button>
     </div>
 
-    <!-- Skip Button -->
+    <!-- Skip Button Container -->
     <div id="skipButtonContainer">
         <img id="skipButton" src="assets/SkipAlt-01.png" alt="Skip Question" onclick="skipQuestion()" style="cursor: pointer;" />
+    </div>
+
+    <!-- Hint Button Container -->
+    <div id="hintButtonContainer">
+        <img id="hintButton" src="assets/SkipAlt-01.png" alt="Show Hint" onclick="showHint()" style="cursor: pointer;" />
     </div>
 
     <!-- Score Chart -->
@@ -73,8 +120,34 @@
         <img id="musicIcon" src="assets/SoundStopped-01.png" alt="Sound Control" onclick="toggleMusic()" style="cursor: pointer;" />
     </div>
 
+    <!-- Hint Popup -->
+    <div id="hintPopup" class="hint-popup">
+        <h3>Hint</h3>
+        <p id="hintText"></p>
+        <button onclick="closeHint()">Close</button>
+    </div>
+
     <script>
+        // Initialize or restore score when page loads
+        window.onload = function() {
+            // Check if there's a temporary score from a previous session
+            const tempScore = localStorage.getItem('tempScore');
+            if (tempScore) {
+                // Restore the score and update the display
+                localStorage.setItem('currentScore', tempScore);
+                document.getElementById('score').textContent = tempScore;
+                // Clear the temporary score
+                localStorage.removeItem('tempScore');
+            } else {
+                // If no temporary score exists, initialize to 0
+                localStorage.setItem('currentScore', '0');
+            }
+        };
+
         function redirectToLoading(targetPage) {
+            // Save current score before redirecting
+            const currentScore = document.getElementById('score').textContent;
+            localStorage.setItem('currentScore', currentScore);
             // Redirect to the loading page with the target page as a query parameter
             window.location.href = `loading.html?target=${targetPage}`;
         }
@@ -116,6 +189,26 @@
                 localStorage.setItem('finalScore', score); // Save the final score
                 window.location.href = 'congratulations.html'; // Redirect to the congratulations page
             }
+        }
+
+        function showHint() {
+            const locationData = locations[currentLocationIndex];
+            const currentQuestion = locationData.questions[currentQuestionIndex];
+            const hintPopup = document.getElementById('hintPopup');
+            const hintText = document.getElementById('hintText');
+            
+            if (currentQuestion.hint) {
+                hintText.textContent = currentQuestion.hint;
+                hintPopup.classList.add('show');
+            } else {
+                hintText.textContent = "No hint available for this question.";
+                hintPopup.classList.add('show');
+            }
+        }
+
+        function closeHint() {
+            const hintPopup = document.getElementById('hintPopup');
+            hintPopup.classList.remove('show');
         }
     </script>
     <script src="scripts/index.js"></script>

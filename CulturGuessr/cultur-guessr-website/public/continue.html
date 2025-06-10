@@ -8,11 +8,34 @@
 </head>
 <body>
     <h1>Do you want to continue?</h1>
-    <div class="button-container">
-        <!-- Redirect to loading.html with index.html as the target -->
-        <button onclick="location.href='loading.html?target=index.html'">Yes</button>
-        <!-- Redirect to loading.html with congratulations.html as the target -->
-        <button class="no-button" onclick="location.href='loading.html?target=congratulations.html'">No</button>
+    <div class="score-display">
+        <h2>Current Score: <span id="currentScore">0</span></h2>
     </div>
+    <div class="button-container">
+        <button onclick="continueGame()">Yes</button>
+        <button class="no-button" onclick="endGame()">No</button>
+    </div>
+
+    <script>
+        // Display current score when page loads
+        window.onload = function() {
+            const currentScore = localStorage.getItem('currentScore') || '0';
+            document.getElementById('currentScore').textContent = currentScore;
+        };
+
+        function continueGame() {
+            // Keep the current score in localStorage as is
+            window.location.href = 'loading.html?target=index.html';
+        }
+
+        function endGame() {
+            // Move the current score to finalScore
+            const currentScore = localStorage.getItem('currentScore') || '0';
+            localStorage.setItem('finalScore', currentScore);
+            // Clear the current score since we're ending
+            localStorage.removeItem('currentScore');
+            window.location.href = 'loading.html?target=congratulations.html';
+        }
+    </script>
 </body>
 </html>

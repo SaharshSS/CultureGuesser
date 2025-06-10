@@ -153,27 +153,74 @@ body {
     cursor: pointer; /* Change the cursor to indicate it's clickable */
 }
 
-/* Skip Button Container */
-#skipButtonContainer {
+/* Game Control Containers */
+#skipButtonContainer,
+#hintButtonContainer {
     position: absolute;
-    bottom: 24px; /* Adjust the position closer to the bottom */
-    right: 150px; /* Adjust the position to the left of the music icon */
-    width: 80px; /* Set the size of the container */
-    height: 80px; /* Set the size of the container */
-    background-color: #4caf50; /* Green background */
-    border-radius: 10px; /* Rounded corners */
-    display: flex; /* Center the icon inside the container */
+    bottom: 24px;
+    width: 80px;
+    height: 80px;
+    background-color: #4caf50;
+    border-radius: 10px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100; /* Ensure it is above other elements */
+    z-index: 100;
 }
 
-/* Skip Button */
-#skipButton {
-    width: 65px; /* Set the icon width */
-    height: 65px; /* Set the icon height */
-    object-fit: contain; /* Ensure the image scales proportionally */
-    cursor: pointer; /* Change the cursor to indicate it's clickable */
+#skipButtonContainer {
+    right: 150px;
+}
+
+#hintButtonContainer {
+    right: 235px;
+}
+
+/* Game Control Buttons */
+#skipButton,
+#hintButton {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+/* Hint Button */
+#hintButton {
+    position: absolute;
+    bottom: 24px;
+    right: 235px;
+    width: 80px;
+    height: 80px;
+    background-color: #4caf50;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#hintButton:hover {
+    background-color: #45a049;
+}
+
+/* Hint Text */
+.hint-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Game Buttons Container */
+.game-buttons-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
 }
 
 /* Ensure the iframe is below other elements */
