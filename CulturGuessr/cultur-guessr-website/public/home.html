@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CulturGuessr</title>
     <link rel="stylesheet" href="styles/home.css">
+    <style>
+        .qr-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.2s ease;
+        }
+
+        .qr-button:hover {
+            transform: scale(1.1);
+        }
+
+        .qr-button img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
 </head>
 <body>
+    <button class="qr-button" onclick="window.open('assets/QR-Code.png', '_blank')">
+        <img src="assets/QR-Code.png" alt="QR Code">
+    </button>
     <div class="globe-container">
         <div class="globe"></div>
     </div>

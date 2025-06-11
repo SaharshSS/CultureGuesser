@@ -41,15 +41,15 @@ window.onload = async function() {
 // Fetch the JSON file
 async function fetchLocations() {
     try {
-        const response = await fetch('locations.json');
+    const response = await fetch('locations.json');
         if (!response.ok) throw new Error('Failed to fetch locations');
-        locations = await response.json();
+    locations = await response.json();
 
-        // Shuffle the locations array
-        shuffleArray(locations);
+    // Shuffle the locations array
+    shuffleArray(locations);
 
-        // Load the first location
-        loadLocation(currentLocationIndex);
+    // Load the first location
+    loadLocation(currentLocationIndex);
     } catch (error) {
         console.error('Error fetching locations:', error);
     }
@@ -106,46 +106,46 @@ function handleTimeOut() {
 // Load the current location and its first question
 function loadLocation(index) {
     try {
-        const locationData = locations[index];
-        const iframe = document.getElementById('map');
-        const questionLabel = document.getElementById('questionLabel');
-        const answerInputContainer = document.getElementById('answerInputContainer');
-        const nextButton = document.getElementById('nextButton');
+    const locationData = locations[index];
+    const iframe = document.getElementById('map');
+    const questionLabel = document.getElementById('questionLabel');
+    const answerInputContainer = document.getElementById('answerInputContainer');
+    const nextButton = document.getElementById('nextButton');
 
-        // Set the map iframe
-        iframe.src = locationData.location;
+    // Set the map iframe
+    iframe.src = locationData.location;
 
-        // Get the current question
-        const currentQuestion = locationData.questions[currentQuestionIndex];
-        questionLabel.textContent = currentQuestion.question;
+    // Get the current question
+    const currentQuestion = locationData.questions[currentQuestionIndex];
+    questionLabel.textContent = currentQuestion.question;
 
-        // Clear previous inputs
-        answerInputContainer.innerHTML = '';
-        nextButton.style.display = 'none';
+    // Clear previous inputs
+    answerInputContainer.innerHTML = '';
+    nextButton.style.display = 'none';
 
-        if (currentQuestion.type === 'multiple-choice') {
-            // Render multiple-choice options
-            const optionsDiv = document.createElement('div');
-            optionsDiv.className = 'options';
-            currentQuestion.options.forEach(option => {
-                const button = document.createElement('button');
-                button.textContent = option;
-                button.onclick = () => checkAnswer(option);
-                optionsDiv.appendChild(button);
-            });
-            answerInputContainer.appendChild(optionsDiv);
-        } else {
-            // Render text input
-            const input = document.createElement('input');
-            input.type = 'text';
-            input.id = 'answerInput';
-            input.placeholder = 'Type your answer here...';
-            input.oninput = () => checkAnswer(input.value);
-            answerInputContainer.appendChild(input);
-        }
+    if (currentQuestion.type === 'multiple-choice') {
+        // Render multiple-choice options
+        const optionsDiv = document.createElement('div');
+        optionsDiv.className = 'options';
+        currentQuestion.options.forEach(option => {
+            const button = document.createElement('button');
+            button.textContent = option;
+            button.onclick = () => checkAnswer(option);
+            optionsDiv.appendChild(button);
+        });
+        answerInputContainer.appendChild(optionsDiv);
+    } else {
+        // Render text input
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.id = 'answerInput';
+        input.placeholder = 'Type your answer here...';
+        input.oninput = () => checkAnswer(input.value);
+        answerInputContainer.appendChild(input);
+    }
 
-        // Start the timer for the current question
-        startTimer();
+    // Start the timer for the current question
+    startTimer();
     } catch (error) {
         console.error('Error loading location:', error);
     }
