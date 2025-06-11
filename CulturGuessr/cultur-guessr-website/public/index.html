@@ -120,11 +120,6 @@
         <img id="skipButton" src="assets/SkipAlt-01.png" alt="Skip Question" onclick="skipQuestion()" style="cursor: pointer;" />
     </div>
 
-    <!-- Hint Button Container -->
-    <div id="hintButtonContainer">
-        <img id="hintButton" src="assets/SkipAlt-01.png" alt="Show Hint" onclick="showHint()" style="cursor: pointer;" />
-    </div>
-
     <!-- Score Chart -->
     <div id="scoreChart">
         <h2>Score</h2>
@@ -138,13 +133,6 @@
     <audio id="backgroundMusic" src="assets/music.mp3" loop></audio>
     <div id="musicIconContainer">
         <img id="musicIcon" src="assets/SoundStopped-01.png" alt="Sound Control" onclick="toggleMusic()" style="cursor: pointer;" />
-    </div>
-
-    <!-- Hint Popup -->
-    <div id="hintPopup" class="hint-popup">
-        <h3>Hint</h3>
-        <p id="hintText"></p>
-        <button onclick="closeHint()">Close</button>
     </div>
 
     <script>
@@ -209,26 +197,6 @@
                 localStorage.setItem('finalScore', score); // Save the final score
                 window.location.href = 'congratulations.html'; // Redirect to the congratulations page
             }
-        }
-
-        function showHint() {
-            const locationData = locations[currentLocationIndex];
-            const currentQuestion = locationData.questions[currentQuestionIndex];
-            const hintPopup = document.getElementById('hintPopup');
-            const hintText = document.getElementById('hintText');
-            
-            if (currentQuestion.hint) {
-                hintText.textContent = currentQuestion.hint;
-                hintPopup.classList.add('show');
-            } else {
-                hintText.textContent = "No hint available for this question.";
-                hintPopup.classList.add('show');
-            }
-        }
-
-        function closeHint() {
-            const hintPopup = document.getElementById('hintPopup');
-            hintPopup.classList.remove('show');
         }
     </script>
     <script src="scripts/index.js"></script>
